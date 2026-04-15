@@ -3,149 +3,114 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CV - Châu Minh Mẫn</title>
+<title>Châu Minh Mẫn | Technical Sales & Poultry Consultant</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<meta name="description" content="Châu Minh Mẫn - Technical Sales & Poultry Consultant">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+:root{
+  --primary:#0f172a;
+  --accent:#16a34a;
+  --bg:#f8fafc;
 }
 
-body {
-    background: linear-gradient(135deg, #020617, #0f172a);
-    color: #e2e8f0;
-    overflow-x: hidden;
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+
+body{
+  font-family:'Inter',sans-serif;
+  background:var(--bg);
+  color:#111;
+  line-height:1.6;
 }
 
-/* CONTAINER */
-.container {
-    max-width: 1100px;
-    margin: auto;
-    padding: 20px;
-}
+.container{max-width:1100px;margin:auto;padding:20px}
 
 /* HEADER */
-header {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    padding: 40px 0;
+header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:20px;
+  border-bottom:1px solid #ddd;
+  padding-bottom:20px;
 }
 
 /* AVATAR */
-.avatar {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    overflow: hidden;
-    border: 4px solid #38bdf8;
-    box-shadow: 0 0 30px rgba(56,189,248,0.6);
-    transition: 0.4s;
+.avatar{
+  width:140px;height:140px;
+  border-radius:50%;
+  overflow:hidden;
+  border:3px solid var(--accent);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:40px;
+  color:#555;
 }
-
-.avatar:hover {
-    transform: scale(1.1) rotate(5deg);
-}
-
-.avatar img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* TEXT */
-.header-text h1 {
-    font-size: 38px;
-    color: #38bdf8;
-}
-
-.header-text p {
-    color: #94a3b8;
-}
-
-/* BUTTON */
-.btn {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 18px;
-    background: #38bdf8;
-    color: #020617;
-    border-radius: 8px;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-.btn:hover {
-    background: #0ea5e9;
+.avatar img{
+  width:100%;height:100%;
+  object-fit:cover;
 }
 
 /* GRID */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+.grid{
+  display:grid;
+  grid-template-columns:2fr 1fr;
+  gap:30px;
 }
 
-/* CARD */
-.card {
-    background: rgba(30,41,59,0.6);
-    backdrop-filter: blur(12px);
-    padding: 20px;
-    border-radius: 16px;
-    transition: 0.4s;
-    opacity: 0;
-    transform: translateY(30px);
+.card{
+  background:white;
+  padding:20px;
+  border-radius:12px;
+  border:1px solid #eee;
+  margin-bottom:20px;
 }
 
-.card.show {
-    opacity: 1;
-    transform: translateY(0);
+/* TEXT */
+h1{font-size:32px;color:var(--primary)}
+h2{margin-bottom:10px;color:var(--accent)}
+h3{margin-top:10px}
+
+/* LIST */
+ul{padding-left:20px}
+li{margin-bottom:6px}
+
+/* BUTTON */
+.btn{
+  display:inline-block;
+  margin-top:10px;
+  padding:8px 14px;
+  background:var(--accent);
+  color:white;
+  border-radius:6px;
+  text-decoration:none;
 }
 
-.card:hover {
-    transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+/* ANIMATION */
+.fade{
+  opacity:0;
+  transform:translateY(20px);
+  transition:0.6s;
 }
-
-.card h2 {
-    margin-bottom: 10px;
-    color: #38bdf8;
-}
-
-/* PROGRESS BAR */
-.skill {
-    margin: 10px 0;
-}
-
-.bar {
-    height: 8px;
-    background: #1e293b;
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-.bar div {
-    height: 100%;
-    background: #38bdf8;
-}
-
-/* FOOTER */
-footer {
-    text-align: center;
-    margin-top: 30px;
-    color: #64748b;
+.fade.show{
+  opacity:1;
+  transform:translateY(0);
 }
 
 /* RESPONSIVE */
-@media(max-width:768px) {
-    header {
-        flex-direction: column;
-        text-align: center;
-    }
+@media(max-width:768px){
+  .grid{grid-template-columns:1fr}
+  header{flex-direction:column;text-align:center}
+}
+
+/* PRINT */
+@media print{
+  .btn{display:none}
 }
 </style>
 </head>
@@ -155,97 +120,109 @@ footer {
 <div class="container">
 
 <header>
-    <div class="avatar">
-        <img src="avatar.jpg">
-    </div>
+<div>
+<h1>Châu Minh Mẫn</h1>
+<p><strong>Technical Sales & Poultry Farm Consultant</strong></p>
 
-    <div class="header-text">
-        <h1>Châu Minh Mẫn</h1>
-        <p>Animal Science | Sales Representative</p>
-        <p>📍 Cà Mau | 🎂 13/01/2001</p>
+<address>
+📍 Cà Mau, Việt Nam<br>
+📞 <a href="tel:0932872890">0932872890</a><br>
+📧 <a href="mailto:ManM0225003@Student.ctu.edu.vn">ManM0225003@Student.ctu.edu.vn</a><br>
+🔗 <a href="#">linkedin.com/in/username</a>
+</address>
 
-        <a href="cv.pdf" class="btn" download>📄 Tải CV</a>
+<button class="btn" onclick="window.print()">📄 In / Save PDF</button>
+</div>
 
-        <p style="margin-top:10px;">
-            <a href="#" style="color:#38bdf8;">LinkedIn</a> |
-            <a href="#" style="color:#38bdf8;">Facebook</a>
-        </p>
-    </div>
+<!-- Avatar: thay images/avatar.jpg bằng ảnh của bạn -->
+<div class="avatar">
+<img src="images/avatar.jpg" alt="Professional headshot of Chau Minh Man"
+onerror="this.style.display='none'; this.parentElement.innerHTML='CM';">
+</div>
+
 </header>
 
-<div class="grid">
+<main class="grid">
 
-<div class="card">
-<h2>Học Vấn</h2>
-<p>ĐH Cần Thơ - Animal Science (2024)</p>
-<p>Thạc sĩ Animal Science (đang học)</p>
+<section>
+
+<div class="card fade">
+<h2>Hồ sơ</h2>
+<p>Bán hàng kỹ thuật và Tư vấn trang trại với chuyên môn sản xuất gia cầm mạnh mẽ, kết hợp hỗ trợ thú y thực hành với thực hiện bán hàng thương mại. Thể hiện thành thạo trong việc tiêm phòng gia cầm, khám nghiệm tử thi và chẩn đoán bệnh để cải thiện đàn gia súc.</p>
 </div>
 
-<div class="card">
-<h2>Kinh Nghiệm</h2>
+<div class="card fade">
+<h2>Kinh nghiệm làm việc</h2>
+
+<h3>Đại diện bán hàng — Olmix Asialand</h3>
+<p>[Ngày bắt đầu] – Hiện tại</p>
 <ul>
-<li>NewHope - Trại heo 12,000 nái</li>
-<li>Mavin - Trại heo</li>
-<li>Olmix Asialand - Vaccine gia cầm</li>
-<li>Sales khu vực miền Đông</li>
+<li>Cung cấp tư vấn kỹ thuật và bán hàng tại trang trại.</li>
+<li>Thực hiện chương trình tiêm phòng đúng quy trình.</li>
+<li>Hỗ trợ khám nghiệm tử thi và chẩn đoán bệnh.</li>
+<li>Đào tạo nhân sự về an toàn sinh học.</li>
+<li>Duy trì và phát triển khách hàng.</li>
+<li>Mở rộng thị trường khu vực Đông Nam.</li>
+</ul>
+
+<h3>Cộng tác viên — Olmix Asialand</h3>
+<p>[Ngày bắt đầu] – [Ngày kết thúc]</p>
+<ul>
+<li>Hỗ trợ tiêm phòng và giám sát sức khỏe đàn.</li>
+<li>Ghi nhận dữ liệu và hỗ trợ thử nghiệm trang trại.</li>
+</ul>
+
+</div>
+
+<div class="card fade">
+<h2>Học vấn</h2>
+<ul>
+<li>Cử nhân Khoa học Động vật — ĐH Cần Thơ (2024)</li>
+<li>Thạc sĩ Khoa học Động vật — Đang học</li>
 </ul>
 </div>
 
-<div class="card">
-<h2>Kỹ Năng</h2>
+</section>
 
-<div class="skill">Sales
-<div class="bar"><div style="width:90%"></div></div>
-</div>
+<aside>
 
-<div class="skill">Tiêm vaccine
-<div class="bar"><div style="width:85%"></div></div>
-</div>
-
-<div class="skill">Chăn nuôi
-<div class="bar"><div style="width:80%"></div></div>
-</div>
-
-<div class="skill">Phân tích
-<div class="bar"><div style="width:75%"></div></div>
-</div>
-
-</div>
-
-<div class="card">
-<h2>Chứng Chỉ</h2>
+<div class="card fade">
+<h2>Kỹ năng</h2>
 <ul>
-<li>Tin học</li>
-<li>Tiếng Anh B1</li>
+<li>Tiêm phòng gia cầm</li>
+<li>Chẩn đoán bệnh</li>
+<li>Quản lý trang trại</li>
+<li>Tư vấn kỹ thuật</li>
+<li>Sales & CRM</li>
 </ul>
 </div>
 
-<div class="card">
-<h2>Thành Tích</h2>
+<div class="card fade">
+<h2>Chứng chỉ</h2>
 <ul>
-<li>🥇 Nhảy cao - Cà Mau</li>
-<li>🏐 Đội bóng chuyền ĐHCT</li>
+<li>Chứng chỉ CNTT — [Tổ chức phát hành]</li>
+<li>Tiếng Anh B1 — [Tổ chức phát hành]</li>
 </ul>
 </div>
 
-</div>
+</aside>
 
-<footer>
-<p>© 2026 - CV Online</p>
+</main>
+
+<footer style="text-align:center;margin-top:30px">
+<p>© 2026 Châu Minh Mẫn | Poultry Technical Specialist</p>
 </footer>
 
 </div>
 
 <script>
-const cards = document.querySelectorAll('.card');
-
-window.addEventListener('scroll', () => {
-    cards.forEach(card => {
-        const top = card.getBoundingClientRect().top;
-        if(top < window.innerHeight - 50) {
-            card.classList.add('show');
-        }
-    });
+const els=document.querySelectorAll('.fade');
+window.addEventListener('scroll',()=>{
+  els.forEach(el=>{
+    if(el.getBoundingClientRect().top < window.innerHeight-50){
+      el.classList.add('show');
+    }
+  });
 });
 </script>
 
