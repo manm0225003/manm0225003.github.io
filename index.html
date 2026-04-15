@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV - Châu Minh Mẫn | Khoa Học Động Vật & Phát Triển Nông Nghiệp</title>
+    <title>CV - Châu Minh Mẫn | Chuyên Gia Chăn Nuôi Heo & Gà</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
     <style>
         /* ===== RESET & BASE ===== */
@@ -52,26 +52,11 @@
             overflow-x: hidden;
         }
 
-        /* ===== SCROLLBAR ===== */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: var(--cream-dark);
-        }
-        ::-webkit-scrollbar-thumb {
-            background: var(--blue-primary);
-            border-radius: 10px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: var(--blue-dark);
-        }
-
-        /* ===== SELECTION ===== */
-        ::selection {
-            background: var(--blue-accent);
-            color: var(--white);
-        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--cream-dark); }
+        ::-webkit-scrollbar-thumb { background: var(--blue-primary); border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--blue-dark); }
+        ::selection { background: var(--blue-accent); color: var(--white); }
 
         /* ===== NAVIGATION ===== */
         .navbar {
@@ -111,9 +96,7 @@
             letter-spacing: -0.5px;
         }
 
-        .nav-logo span {
-            color: var(--gold);
-        }
+        .nav-logo span { color: var(--gold); }
 
         .nav-links {
             display: flex;
@@ -129,7 +112,6 @@
             padding: 8px 16px;
             border-radius: 50px;
             transition: var(--transition);
-            position: relative;
         }
 
         .nav-links a:hover,
@@ -155,15 +137,9 @@
             transition: var(--transition);
         }
 
-        .nav-toggle.active span:nth-child(1) {
-            transform: rotate(45deg) translate(5px, 5px);
-        }
-        .nav-toggle.active span:nth-child(2) {
-            opacity: 0;
-        }
-        .nav-toggle.active span:nth-child(3) {
-            transform: rotate(-45deg) translate(5px, -5px);
-        }
+        .nav-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+        .nav-toggle.active span:nth-child(2) { opacity: 0; }
+        .nav-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
 
         /* ===== HERO SECTION ===== */
         .hero {
@@ -217,9 +193,7 @@
             z-index: 2;
         }
 
-        .hero-content {
-            animation: fadeInUp 1s ease-out;
-        }
+        .hero-content { animation: fadeInUp 1s ease-out; }
 
         .hero-badge {
             display: inline-flex;
@@ -333,9 +307,7 @@
             border-top: 1px solid rgba(27, 94, 140, 0.1);
         }
 
-        .stat-item {
-            text-align: center;
-        }
+        .stat-item { text-align: center; }
 
         .stat-number {
             font-family: 'Playfair Display', serif;
@@ -373,17 +345,17 @@
             animation: spin 30s linear infinite;
         }
 
-        @keyframes spin {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
-
         .avatar-ring-2 {
             position: absolute;
             inset: -28px;
             border-radius: 50%;
             border: 2px dashed rgba(212, 168, 67, 0.12);
             animation: spin 40s linear infinite reverse;
+        }
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
         }
 
         .avatar-img {
@@ -424,35 +396,14 @@
             font-size: 1.1rem;
         }
 
-        .deco-1 {
-            top: 20px;
-            right: -30px;
-            animation-delay: 0s;
-        }
+        .deco-1 { top: 20px; right: -30px; animation-delay: 0s; }
+        .deco-1 .icon { background: linear-gradient(135deg, #E8F5E9, #C8E6C9); }
 
-        .deco-1 .icon {
-            background: linear-gradient(135deg, #E8F5E9, #C8E6C9);
-        }
+        .deco-2 { bottom: 40px; left: -40px; animation-delay: 1.5s; }
+        .deco-2 .icon { background: linear-gradient(135deg, #FFF3E0, #FFE0B2); }
 
-        .deco-2 {
-            bottom: 40px;
-            left: -40px;
-            animation-delay: 1.5s;
-        }
-
-        .deco-2 .icon {
-            background: linear-gradient(135deg, #FFF3E0, #FFE0B2);
-        }
-
-        .deco-3 {
-            bottom: -10px;
-            right: 20px;
-            animation-delay: 3s;
-        }
-
-        .deco-3 .icon {
-            background: linear-gradient(135deg, #E3F2FD, #BBDEFB);
-        }
+        .deco-3 { bottom: -10px; right: 20px; animation-delay: 3s; }
+        .deco-3 .icon { background: linear-gradient(135deg, #E3F2FD, #BBDEFB); }
 
         @keyframes float {
             0%, 100% { transform: translateY(0); }
@@ -470,10 +421,7 @@
         }
 
         /* ===== SECTION COMMON ===== */
-        .section {
-            padding: 100px 24px;
-            position: relative;
-        }
+        .section { padding: 100px 24px; position: relative; }
 
         .section-container {
             max-width: 1100px;
@@ -525,9 +473,7 @@
         }
 
         /* ===== ABOUT SECTION ===== */
-        .about {
-            background: var(--white);
-        }
+        .about { background: var(--white); }
 
         .about-grid {
             display: grid;
@@ -629,9 +575,119 @@
             line-height: 1.7;
         }
 
+        /* ===== SPECIALIZATION SECTION ===== */
+        .specialization {
+            background: linear-gradient(180deg, var(--cream) 0%, var(--white) 100%);
+        }
+
+        .spec-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .spec-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: 40px 36px;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(27, 94, 140, 0.06);
+        }
+
+        .spec-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+        }
+
+        .spec-card.pig::before {
+            background: linear-gradient(90deg, #E91E63, #F48FB1);
+        }
+
+        .spec-card.chicken::before {
+            background: linear-gradient(90deg, #FF9800, #FFCC02);
+        }
+
+        .spec-card:hover {
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-8px);
+        }
+
+        .spec-emoji {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .spec-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 16px;
+        }
+
+        .spec-card p {
+            font-size: 0.92rem;
+            color: var(--text-medium);
+            line-height: 1.8;
+            margin-bottom: 16px;
+        }
+
+        .spec-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .spec-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            font-size: 0.88rem;
+            color: var(--text-medium);
+            line-height: 1.6;
+        }
+
+        .spec-list li::before {
+            content: '✓';
+            color: var(--green-soft);
+            font-weight: 700;
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+
+        .spec-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 14px;
+            border-radius: 50px;
+            font-size: 0.78rem;
+            font-weight: 600;
+            margin-top: 16px;
+        }
+
+        .spec-card.pig .spec-badge {
+            background: #FCE4EC;
+            color: #C62828;
+        }
+
+        .spec-card.chicken .spec-badge {
+            background: #FFF3E0;
+            color: #E65100;
+        }
+
         /* ===== EDUCATION SECTION ===== */
         .education {
-            background: linear-gradient(180deg, var(--cream) 0%, var(--white) 100%);
+            background: var(--white);
         }
 
         .edu-cards {
@@ -641,7 +697,7 @@
         }
 
         .edu-card {
-            background: var(--white);
+            background: var(--cream);
             border-radius: var(--radius-lg);
             padding: 36px;
             box-shadow: var(--shadow-sm);
@@ -664,6 +720,7 @@
         .edu-card:hover {
             box-shadow: var(--shadow-lg);
             transform: translateY(-6px);
+            background: var(--white);
         }
 
         .edu-card.master::before {
@@ -747,7 +804,7 @@
 
         /* ===== EXPERIENCE SECTION ===== */
         .experience {
-            background: var(--white);
+            background: linear-gradient(180deg, var(--cream) 0%, var(--cream-dark) 100%);
         }
 
         .timeline {
@@ -806,7 +863,7 @@
         }
 
         .timeline-card {
-            background: var(--cream);
+            background: var(--white);
             border-radius: var(--radius-md);
             padding: 28px;
             max-width: 420px;
@@ -818,7 +875,6 @@
         .timeline-card:hover {
             box-shadow: var(--shadow-md);
             transform: translateY(-4px);
-            background: var(--white);
         }
 
         .timeline-date {
@@ -866,14 +922,14 @@
             font-weight: 500;
             padding: 4px 12px;
             border-radius: 50px;
-            background: var(--white);
+            background: var(--cream);
             color: var(--text-medium);
             border: 1px solid rgba(27, 94, 140, 0.1);
         }
 
         /* ===== SKILLS SECTION ===== */
         .skills {
-            background: linear-gradient(180deg, var(--cream) 0%, var(--cream-dark) 100%);
+            background: var(--white);
         }
 
         .skills-grid {
@@ -883,7 +939,7 @@
         }
 
         .skill-card {
-            background: var(--white);
+            background: var(--cream);
             border-radius: var(--radius-md);
             padding: 30px;
             text-align: center;
@@ -912,6 +968,7 @@
         .skill-card:hover {
             box-shadow: var(--shadow-md);
             transform: translateY(-6px);
+            background: var(--white);
         }
 
         .skill-icon {
@@ -926,11 +983,11 @@
             transition: var(--transition);
         }
 
-        .skill-card:nth-child(1) .skill-icon { background: linear-gradient(135deg, #E3F2FD, #BBDEFB); }
-        .skill-card:nth-child(2) .skill-icon { background: linear-gradient(135deg, #E8F5E9, #C8E6C9); }
-        .skill-card:nth-child(3) .skill-icon { background: linear-gradient(135deg, #FFF3E0, #FFE0B2); }
-        .skill-card:nth-child(4) .skill-icon { background: linear-gradient(135deg, #F3E5F5, #E1BEE7); }
-        .skill-card:nth-child(5) .skill-icon { background: linear-gradient(135deg, #E0F7FA, #B2EBF2); }
+        .skill-card:nth-child(1) .skill-icon { background: linear-gradient(135deg, #FCE4EC, #F8BBD0); }
+        .skill-card:nth-child(2) .skill-icon { background: linear-gradient(135deg, #FFF3E0, #FFE0B2); }
+        .skill-card:nth-child(3) .skill-icon { background: linear-gradient(135deg, #E8F5E9, #C8E6C9); }
+        .skill-card:nth-child(4) .skill-icon { background: linear-gradient(135deg, #E3F2FD, #BBDEFB); }
+        .skill-card:nth-child(5) .skill-icon { background: linear-gradient(135deg, #F3E5F5, #E1BEE7); }
         .skill-card:nth-child(6) .skill-icon { background: linear-gradient(135deg, #FFF8E1, #FFECB3); }
 
         .skill-card h3 {
@@ -962,7 +1019,7 @@
         .skill-bar {
             width: 100%;
             height: 6px;
-            background: var(--cream);
+            background: var(--white);
             border-radius: 3px;
             overflow: hidden;
         }
@@ -977,7 +1034,7 @@
 
         /* ===== ACHIEVEMENTS SECTION ===== */
         .achievements {
-            background: var(--white);
+            background: linear-gradient(180deg, var(--cream) 0%, var(--white) 100%);
         }
 
         .achievement-grid {
@@ -991,7 +1048,7 @@
             align-items: flex-start;
             gap: 20px;
             padding: 28px;
-            background: var(--cream);
+            background: var(--white);
             border-radius: var(--radius-md);
             transition: var(--transition);
             border: 1px solid rgba(27, 94, 140, 0.06);
@@ -1000,7 +1057,6 @@
         .achievement-card:hover {
             box-shadow: var(--shadow-md);
             transform: translateY(-4px);
-            background: var(--white);
         }
 
         .achievement-icon {
@@ -1014,18 +1070,10 @@
             flex-shrink: 0;
         }
 
-        .achievement-card:nth-child(1) .achievement-icon {
-            background: linear-gradient(135deg, #FFF8E1, #FFD54F);
-        }
-        .achievement-card:nth-child(2) .achievement-icon {
-            background: linear-gradient(135deg, #E3F2FD, #64B5F6);
-        }
-        .achievement-card:nth-child(3) .achievement-icon {
-            background: linear-gradient(135deg, #E8F5E9, #81C784);
-        }
-        .achievement-card:nth-child(4) .achievement-icon {
-            background: linear-gradient(135deg, #FCE4EC, #F48FB1);
-        }
+        .achievement-card:nth-child(1) .achievement-icon { background: linear-gradient(135deg, #FFF8E1, #FFD54F); }
+        .achievement-card:nth-child(2) .achievement-icon { background: linear-gradient(135deg, #E3F2FD, #64B5F6); }
+        .achievement-card:nth-child(3) .achievement-icon { background: linear-gradient(135deg, #E8F5E9, #81C784); }
+        .achievement-card:nth-child(4) .achievement-icon { background: linear-gradient(135deg, #FCE4EC, #F48FB1); }
 
         .achievement-card h3 {
             font-size: 1.05rem;
@@ -1059,25 +1107,11 @@
             background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 70%);
         }
 
-        .contact .section-tag {
-            color: var(--gold-light);
-        }
-
-        .contact .section-tag::before {
-            background: linear-gradient(90deg, transparent, var(--gold-light));
-        }
-
-        .contact .section-tag::after {
-            background: linear-gradient(90deg, var(--gold-light), transparent);
-        }
-
-        .contact .section-title {
-            color: var(--white);
-        }
-
-        .contact .section-desc {
-            color: rgba(255, 255, 255, 0.7);
-        }
+        .contact .section-tag { color: var(--gold-light); }
+        .contact .section-tag::before { background: linear-gradient(90deg, transparent, var(--gold-light)); }
+        .contact .section-tag::after { background: linear-gradient(90deg, var(--gold-light), transparent); }
+        .contact .section-title { color: var(--white); }
+        .contact .section-desc { color: rgba(255, 255, 255, 0.7); }
 
         .contact-grid {
             display: grid;
@@ -1275,38 +1309,21 @@
                 gap: 40px;
             }
 
-            .hero-content {
-                order: 2;
-            }
-
-            .hero-image {
-                order: 1;
-            }
-
-            .hero-desc {
-                margin: 0 auto 32px;
-            }
-
-            .hero-buttons {
-                justify-content: center;
-            }
-
-            .hero-stats {
-                justify-content: center;
-            }
+            .hero-content { order: 2; }
+            .hero-image { order: 1; }
+            .hero-desc { margin: 0 auto 32px; }
+            .hero-buttons { justify-content: center; }
+            .hero-stats { justify-content: center; }
 
             .avatar-wrapper {
                 width: 300px;
                 height: 300px;
             }
 
-            .about-grid {
-                grid-template-columns: 1fr;
-            }
+            .about-grid { grid-template-columns: 1fr; }
+            .spec-grid { grid-template-columns: 1fr; }
 
-            .timeline::before {
-                left: 20px;
-            }
+            .timeline::before { left: 20px; }
 
             .timeline-item,
             .timeline-item:nth-child(even) {
@@ -1315,21 +1332,11 @@
                 justify-content: flex-start;
             }
 
-            .timeline-dot {
-                left: 20px;
-            }
+            .timeline-dot { left: 20px; }
+            .timeline-card { max-width: 100%; }
 
-            .timeline-card {
-                max-width: 100%;
-            }
-
-            .skills-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .contact-grid {
-                grid-template-columns: 1fr;
-            }
+            .skills-grid { grid-template-columns: repeat(2, 1fr); }
+            .contact-grid { grid-template-columns: 1fr; }
         }
 
         @media (max-width: 768px) {
@@ -1347,9 +1354,7 @@
                 transition: var(--transition);
             }
 
-            .nav-links.open {
-                right: 0;
-            }
+            .nav-links.open { right: 0; }
 
             .nav-links a {
                 padding: 14px 20px;
@@ -1357,101 +1362,43 @@
                 border-radius: var(--radius-sm);
             }
 
-            .nav-toggle {
-                display: flex;
-            }
+            .nav-toggle { display: flex; }
 
-            .hero-title {
-                font-size: 2.4rem;
-            }
+            .hero-title { font-size: 2.4rem; }
+            .hero-subtitle { font-size: 1.05rem; }
 
-            .hero-subtitle {
-                font-size: 1.05rem;
-            }
+            .section { padding: 70px 20px; }
+            .section-title { font-size: 2rem; }
 
-            .section {
-                padding: 70px 20px;
-            }
+            .edu-cards { grid-template-columns: 1fr; }
+            .achievement-grid { grid-template-columns: 1fr; }
+            .skills-grid { grid-template-columns: 1fr; }
+            .info-grid { grid-template-columns: 1fr; }
 
-            .section-title {
-                font-size: 2rem;
-            }
-
-            .edu-cards {
-                grid-template-columns: 1fr;
-            }
-
-            .achievement-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .skills-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .info-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .hero-stats {
-                gap: 20px;
-            }
-
-            .stat-number {
-                font-size: 1.6rem;
-            }
+            .hero-stats { gap: 20px; }
+            .stat-number { font-size: 1.6rem; }
 
             .avatar-wrapper {
                 width: 250px;
                 height: 250px;
             }
 
-            .avatar-decoration {
-                display: none;
-            }
-
-            .deco-2 {
-                display: none;
-            }
+            .avatar-decoration { display: none; }
+            .deco-2 { display: none; }
         }
 
         @media (max-width: 480px) {
-            .hero-title {
-                font-size: 2rem;
-            }
-
-            .hero-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .btn {
-                width: 100%;
-                justify-content: center;
-            }
-
-            .hero-stats {
-                flex-wrap: wrap;
-                gap: 16px;
-            }
+            .hero-title { font-size: 2rem; }
+            .hero-buttons { flex-direction: column; align-items: center; }
+            .btn { width: 100%; justify-content: center; }
+            .hero-stats { flex-wrap: wrap; gap: 16px; }
         }
 
-        /* ===== PRINT STYLES ===== */
         @media print {
-            .navbar, .back-to-top, .hero::before, .hero::after {
-                display: none !important;
-            }
-            .hero {
-                min-height: auto;
-                padding: 40px 0;
-            }
-            .section {
-                padding: 30px 0;
-            }
-            .reveal {
-                opacity: 1 !important;
-                transform: none !important;
-            }
+            .navbar, .back-to-top, .hero::before, .hero::after { display: none !important; }
+            .hero { min-height: auto; padding: 40px 0; }
+            .section { padding: 30px 0; }
+            .reveal { opacity: 1 !important; transform: none !important; }
         }
     </style>
 </head>
@@ -1464,6 +1411,7 @@
             <ul class="nav-links" id="navLinks">
                 <li><a href="#hero" class="active">Trang chủ</a></li>
                 <li><a href="#about">Giới thiệu</a></li>
+                <li><a href="#specialization">Chuyên môn</a></li>
                 <li><a href="#education">Học vấn</a></li>
                 <li><a href="#experience">Kinh nghiệm</a></li>
                 <li><a href="#skills">Kỹ năng</a></li>
@@ -1484,23 +1432,23 @@
             <div class="hero-content">
                 <div class="hero-badge">
                     <span class="dot"></span>
-                    Sẵn sàng cho cơ hội mới
+                    Chuyên gia Chăn nuôi Heo &amp; Gà
                 </div>
                 <h1 class="hero-title">
                     Châu Minh<br><span class="highlight">Mẫn</span>
                 </h1>
-                <p class="hero-subtitle">Cử nhân Khoa học Động vật &amp; Thạc sĩ đang theo học</p>
+                <p class="hero-subtitle">Cử nhân Khoa học Động vật — Thạc sĩ đang theo học</p>
                 <p class="hero-desc">
-                    Chuyên gia trẻ trong lĩnh vực chăn nuôi &amp; dinh dưỡng động vật, với kinh nghiệm thực tế tại các tập đoàn hàng đầu như New Hope, Mavin và Olmix Asialand. Kết hợp nền tảng học thuật vững chắc với kỹ năng kinh doanh và nghiên cứu chuyên sâu.
+                    Chuyên môn sâu về chăn nuôi heo và gà, với kinh nghiệm thực tế tại các tập đoàn hàng đầu như New Hope, Mavin và Olmix Asialand. Thành thạo quy trình chăn nuôi công nghiệp, tiêm vaccine, quản lý dinh dưỡng và an toàn sinh học.
                 </p>
                 <div class="hero-buttons">
                     <a href="#contact" class="btn btn-primary">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
                         Liên hệ ngay
                     </a>
-                    <a href="#experience" class="btn btn-outline">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-                        Xem kinh nghiệm
+                    <a href="#specialization" class="btn btn-outline">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                        Xem chuyên môn
                     </a>
                 </div>
                 <div class="hero-stats">
@@ -1509,12 +1457,12 @@
                         <div class="stat-label">Năm kinh nghiệm</div>
                     </div>
                     <div class="stat-item">
-                        <div class="stat-number">3</div>
-                        <div class="stat-label">Tập đoàn lớn</div>
-                    </div>
-                    <div class="stat-item">
                         <div class="stat-number">12K</div>
                         <div class="stat-label">Nái quản lý</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">3</div>
+                        <div class="stat-label">Tập đoàn lớn</div>
                     </div>
                     <div class="stat-item">
                         <div class="stat-number">🥇</div>
@@ -1535,10 +1483,10 @@
                         </div>
                     </div>
                     <div class="avatar-decoration deco-2">
-                        <div class="icon">💉</div>
+                        <div class="icon">🐔</div>
                         <div>
-                            <div style="font-size:0.75rem;color:var(--text-light)">Kỹ năng</div>
-                            <div>Tiêm Vaccine</div>
+                            <div style="font-size:0.75rem;color:var(--text-light)">Chuyên môn</div>
+                            <div>Chăn nuôi Gà</div>
                         </div>
                     </div>
                     <div class="avatar-decoration deco-3">
@@ -1559,16 +1507,16 @@
             <div class="section-header reveal">
                 <div class="section-tag">Giới thiệu</div>
                 <h2 class="section-title">Về Bản Thân Tôi</h2>
-                <p class="section-desc">Hành trình từ sinh viên Nông nghiệp đến chuyên gia chăn nuôi & kinh doanh nông nghiệp</p>
+                <p class="section-desc">Hành trình từ sinh viên Nông nghiệp đến chuyên gia chăn nuôi heo & gà</p>
             </div>
             <div class="about-grid">
                 <div class="about-text reveal">
-                    <h3>Châu Minh Mẫn — Đam mê Nông nghiệp &amp; Chăn nuôi</h3>
+                    <h3>Châu Minh Mẫn — Chuyên Gia Chăn Nuôi Heo &amp; Gà</h3>
                     <p>
-                        Tôi là một cử nhân chuyên ngành Khoa học Động vật tốt nghiệp Đại học Cần Thơ năm 2024, hiện đang tiếp tục theo đuổi chương trình Thạc sĩ cùng chuyên ngành. Với nền tảng kiến thức vững chắc và kinh nghiệm thực tiễn tại các tập đoàn chăn nuôi hàng đầu Việt Nam, tôi mong muốn đóng góp vào sự phát triển bền vững của ngành nông nghiệp nước nhà.
+                        Tôi là cử nhân chuyên ngành Khoa học Động vật tốt nghiệp Đại học Cần Thơ năm 2024, hiện đang theo học Thạc sĩ cùng chuyên ngành. Với nền tảng kiến thức vững chắc và kinh nghiệm thực tiễn trực tiếp tại các trang trại chăn nuôi heo quy mô lớn (12.000 nái) và trang trại gà, tôi am hiểu sâu sắc toàn bộ quy trình chăn nuôi công nghiệp từ khâu dinh dưỡng, chăm sóc, phòng bệnh đến quản lý trang trại.
                     </p>
                     <p>
-                        Ngoài chuyên môn, tôi còn là một người năng động với thành tích thể thao nổi bật và khả năng làm việc nhóm xuất sắc — những yếu tố giúp tôi tự tin thích nghi với mọi môi trường làm việc chuyên nghiệp.
+                        Ngoài chuyên môn chăn nuôi, tôi còn có kinh nghiệm thực tế trong lĩnh vực kinh doanh sản phẩm dinh dưỡng & thú y, cùng kỹ năng tiêm vaccine cho gà và hỗ trợ kỹ thuật cho nông dân. Tôi là người năng động, có thành tích thể thao nổi bật và khả năng làm việc nhóm xuất sắc.
                     </p>
                     <div class="info-grid">
                         <div class="info-item">
@@ -1604,16 +1552,61 @@
                 <div class="about-highlights reveal reveal-delay-2">
                     <div class="highlight-card">
                         <h4>🎯 Mục tiêu nghề nghiệp</h4>
-                        <p>Phát triển chuyên sâu trong lĩnh vực Khoa học Động vật & Kinh doanh Nông nghiệp, hướng đến vị trí Quản lý Kỹ thuật hoặc Phát triển Thị trường, ứng dụng nghiên cứu vào thực tiễn chăn nuôi bền vững.</p>
+                        <p>Trở thành chuyên gia kỹ thuật hoặc quản lý trang trại chăn nuôi heo & gà quy mô lớn, ứng dụng khoa học vào thực tiễn để nâng cao năng suất, hiệu quả kinh tế và phát triển chăn nuôi bền vững tại Việt Nam.</p>
                     </div>
                     <div class="highlight-card">
                         <h4>💡 Triết lý làm việc</h4>
-                        <p>"Kết hợp giữa kiến thức học thuật và kinh nghiệm thực địa để tạo ra giá trị bền vững cho ngành chăn nuôi Việt Nam."</p>
+                        <p>"Chăn nuôi hiện đại không chỉ là nuôi con vật — đó là quản lý dinh dưỡng, phòng bệnh, an toàn sinh học và tối ưu hóa hiệu quả kinh tế bằng kiến thức khoa học."</p>
                     </div>
                     <div class="highlight-card">
                         <h4>🌟 Điểm mạnh nổi bật</h4>
-                        <p>Khả năng thích nghi nhanh, giao tiếp tốt, tư duy phân tích sắc bén và tinh thần học hỏi không ngừng — được rèn luyện qua môi trường đại học và thực tế doanh nghiệp.</p>
+                        <p>Trải nghiệm thực tế tại trang trại 12.000 nái, thành thạo tiêm vaccine gà, am hiểu quy trình chăn nuôi công nghiệp, kỹ năng giao tiếp và tư vấn kỹ thuật cho nông dân & đại lý.</p>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SPECIALIZATION SECTION ===== -->
+    <section class="section specialization" id="specialization">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <div class="section-tag">Chuyên môn</div>
+                <h2 class="section-title">Lĩnh Vực Chuyên Sâu</h2>
+                <p class="section-desc">Hai thế mạnh cốt lõi được tôi rèn luyện qua học tập và thực tiễn tại các tập đoàn hàng đầu</p>
+            </div>
+            <div class="spec-grid">
+                <div class="spec-card pig reveal">
+                    <span class="spec-emoji">🐷</span>
+                    <h3>Chăn Nuôi Heo</h3>
+                    <p>
+                        Kinh nghiệm trực tiếp tại trại heo 12.000 nái của tập đoàn New Hope và Mavin — quy mô công nghiệp hàng đầu Việt Nam. Am hiểu toàn diện quy trình chăn nuôi heo từ nái sinh sản, heo con theo mẹ, heo cai sữa đến heo thịt xuất chuồng.
+                    </p>
+                    <ul class="spec-list">
+                        <li>Quản lý & chăm sóc đàn nái sinh sản: phối giống, theo dõi thai kỳ, quản lý đẻ và nuôi con</li>
+                        <li>Chăm sóc heo con theo mẹ & heo cai sữa: kỹ thuật úm, tập ăn, quản lý sức khỏe</li>
+                        <li>Quản lý dinh dưỡng: phối trộn khẩu phần, theo dõi tăng trọng, tối ưu FCR</li>
+                        <li>An toàn sinh học: quy trình ra vào trại, vệ sinh sát trùng, kiểm soát dịch bệnh</li>
+                        <li>Theo dõi & xử lý bệnh thường gặp: PRRS, PED, tai xanh, viêm phổi, tiêu chảy</li>
+                        <li>Ghi chép nhật ký trang trại, báo cáo kỹ thuật hàng ngày</li>
+                    </ul>
+                    <span class="spec-badge">🏭 Kinh nghiệm trại 12.000 nái</span>
+                </div>
+                <div class="spec-card chicken reveal reveal-delay-2">
+                    <span class="spec-emoji">🐔</span>
+                    <h3>Chăn Nuôi Gà</h3>
+                    <p>
+                        Kinh nghiệm thực tế trong tiêm vaccine và phòng bệnh cho gà tại các trang trại đối tác của Olmix Asialand khu vực Bến Tre. Thành thạo quy trình tiêm chủng, đánh giá đáp ứng miễn dịch và tư vấn kỹ thuật cho chủ trại.
+                    </p>
+                    <ul class="spec-list">
+                        <li>Tiêm vaccine cho gà: Newcastle, Gumboro, cúm gia cầm, Marek, IB, ILT</li>
+                        <li>Quy trình tiêm chủng: tiêm dưới da, tiêm bắp, nhỏ mắt/mũi, uống qua nước</li>
+                        <li>Quản lý chuồng trại gà: nhiệt độ, độ ẩm, mật độ, thông gió, chất độn chuồng</li>
+                        <li>Phòng bệnh tổng hợp: an toàn sinh học, khử trùng, quản lý stress đàn gà</li>
+                        <li>Đánh giá hiệu quả vaccine: theo dõi đáp ứng miễn dịch, tỷ lệ bảo hộ</li>
+                        <li>Hỗ trợ kỹ thuật cho nông dân: tư vấn lịch tiêm, xử lý phản ứng sau tiêm</li>
+                    </ul>
+                    <span class="spec-badge">💉 Thành thạo tiêm vaccine</span>
                 </div>
             </div>
         </div>
@@ -1625,7 +1618,7 @@
             <div class="section-header reveal">
                 <div class="section-tag">Học vấn</div>
                 <h2 class="section-title">Nền Tảng Học Thuật</h2>
-                <p class="section-desc">Hành trình học tập tại ngôi trường Đại học hàng đầu khu vực Đồng bằng sông Cửu Long</p>
+                <p class="section-desc">Đào tạo bài bản tại Đại học Cần Thơ — ngôi trường hàng đầu khu vực ĐBSCL</p>
             </div>
             <div class="edu-cards">
                 <div class="edu-card reveal">
@@ -1635,10 +1628,11 @@
                     <p class="edu-school">Trường Đại học Cần Thơ</p>
                     <p class="edu-year">Tốt nghiệp năm 2024</p>
                     <ul class="edu-details">
-                        <li>Dinh dưỡng vật nuôi & Thức ăn chăn nuôi</li>
-                        <li>Quản lý dịch bệnh & An toàn sinh học</li>
-                        <li>Kỹ thuật chăn nuôi Heo & Gia cầm</li>
+                        <li>Dinh dưỡng vật nuôi & Thức ăn chăn nuôi heo, gà</li>
+                        <li>Kỹ thuật chăn nuôi Heo & Gia cầm chuyên sâu</li>
+                        <li>Quản lý dịch bệnh & An toàn sinh học trang trại</li>
                         <li>Di truyền & Chọn giống động vật</li>
+                        <li>Sinh lý sinh sản động vật</li>
                         <li>Quản lý & Kinh doanh trang trại</li>
                     </ul>
                 </div>
@@ -1649,10 +1643,10 @@
                     <p class="edu-school">Trường Đại học Cần Thơ — Khóa 32</p>
                     <p class="edu-year">Hiện tại</p>
                     <ul class="edu-details">
-                        <li>Nghiên cứu chuyên sâu về dinh dưỡng động vật</li>
+                        <li>Nghiên cứu chuyên sâu về dinh dưỡng heo & gia cầm</li>
                         <li>Phương pháp nghiên cứu khoa học nâng cao</li>
                         <li>Ứng dụng công nghệ sinh học trong chăn nuôi</li>
-                        <li>Phát triển bền vững ngành nông nghiệp</li>
+                        <li>Phát triển bền vững ngành chăn nuôi Việt Nam</li>
                     </ul>
                 </div>
             </div>
@@ -1665,7 +1659,7 @@
             <div class="section-header reveal">
                 <div class="section-tag">Kinh nghiệm</div>
                 <h2 class="section-title">Hành Trình Sự Nghiệp</h2>
-                <p class="section-desc">Từ thực tập sinh đến đại diện kinh doanh — mỗi bước đi đều là bài học quý giá</p>
+                <p class="section-desc">Từ thực tập sinh chăn nuôi đến đại diện kinh doanh — mỗi bước đi đều gắn liền với heo & gà</p>
             </div>
             <div class="timeline">
                 <!-- Item 1 -->
@@ -1676,10 +1670,11 @@
                         <h3>Đại diện Kinh doanh Khu vực Miền Đông</h3>
                         <p class="company">Công ty Olmix Asialand</p>
                         <p>
-                            Tư vấn, giới thiệu và phân phối sản phẩm dinh dưỡng & thú y cho hệ thống đại lý và trang trại khu vực miền Đông Nam Bộ. Xây dựng và duy trì mạng lưới khách hàng, hỗ trợ kỹ thuật chăn nuôi, theo dõi hiệu quả sản phẩm sau bán hàng. Thu thập phản hồi thị trường và đề xuất chiến lược mở rộng.
+                            Tư vấn và phân phối sản phẩm dinh dưỡng & phụ gia chăn nuôi cho hệ thống đại lý và trang trại heo, gà khu vực miền Đông Nam Bộ. Hỗ trợ kỹ thuật chăn nuôi, tư vấn giải pháp dinh dưỡng tối ưu cho đàn heo và gia cầm. Theo dõi hiệu quả sản phẩm sau bán hàng và thu thập phản hồi từ khách hàng.
                         </p>
                         <div class="tags">
-                            <span class="tag">Kinh doanh B2B</span>
+                            <span class="tag">🐷 Dinh dưỡng heo</span>
+                            <span class="tag">🐔 Dinh dưỡng gà</span>
                             <span class="tag">Tư vấn kỹ thuật</span>
                             <span class="tag">Phát triển thị trường</span>
                         </div>
@@ -1690,15 +1685,16 @@
                     <div class="timeline-dot"></div>
                     <div class="timeline-card">
                         <div class="timeline-date">📅 Năm 3 & 4 Đại học</div>
-                        <h3>Cộng tác viên Kỹ thuật</h3>
+                        <h3>Cộng tác viên Kỹ thuật — Tiêm Vaccine Gà</h3>
                         <p class="company">Công ty Olmix Asialand — Bến Tre</p>
                         <p>
-                            Hỗ trợ triển khai chương trình tiêm vaccine cho gà tại các trang trại đối tác. Ghi nhận dữ liệu, đánh giá hiệu quả miễn dịch và hỗ trợ kỹ thuật viên chính trong công tác phòng bệnh. Rèn luyện kỹ năng thực địa và giao tiếp với nông dân.
+                            Trực tiếp tiêm vaccine cho gà tại các trang trại đối tác: Newcastle, Gumboro, cúm gia cầm và các loại vaccine khác. Thực hiện đúng quy trình tiêm chủng (tiêm dưới da, tiêm bắp, nhỏ mắt/mũi). Ghi nhận dữ liệu đáp ứng miễn dịch, theo dõi tỷ lệ bảo hộ và hỗ trợ kỹ thuật viên chính trong công tác phòng bệnh tổng hợp cho đàn gà.
                         </p>
                         <div class="tags">
-                            <span class="tag">Tiêm vaccine</span>
-                            <span class="tag">Chăn nuôi gia cầm</span>
+                            <span class="tag">🐔 Tiêm vaccine gà</span>
                             <span class="tag">Phòng bệnh</span>
+                            <span class="tag">Đánh giá miễn dịch</span>
+                            <span class="tag">Hỗ trợ kỹ thuật</span>
                         </div>
                     </div>
                 </div>
@@ -1707,106 +1703,5 @@
                     <div class="timeline-dot"></div>
                     <div class="timeline-card">
                         <div class="timeline-date">📅 Thực tập Đại học</div>
-                        <h3>Thực tập sinh Chăn nuôi Heo</h3>
-                        <p class="company">Trại heo 12.000 nái — New Hope & Mavin</p>
-                        <p>
-                            Tham gia trực tiếp quy trình chăn nuôi công nghiệp quy mô lớn: quản lý dinh dưỡng, chăm sóc đàn nái và heo con, thực hiện an toàn sinh học. Học hỏi vận hành trang trại hiện đại, xử lý tình huống dịch bệnh và ghi nhật ký kỹ thuật hàng ngày.
-                        </p>
-                        <div class="tags">
-                            <span class="tag">Chăn nuôi heo</span>
-                            <span class="tag">An toàn sinh học</span>
-                            <span class="tag">Quy mô công nghiệp</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== SKILLS SECTION ===== -->
-    <section class="section skills" id="skills">
-        <div class="section-container">
-            <div class="section-header reveal">
-                <div class="section-tag">Kỹ năng</div>
-                <h2 class="section-title">Năng Lực Chuyên Môn</h2>
-                <p class="section-desc">Tổng hợp kỹ năng được tích lũy qua học tập và thực tiễn công việc</p>
-            </div>
-            <div class="skills-grid">
-                <div class="skill-card reveal">
-                    <div class="skill-icon">🐷</div>
-                    <h3>Chăn nuôi Heo</h3>
-                    <p>Quản lý đàn nái, heo con, heo thịt tại trang trại quy mô công nghiệp 12.000 nái</p>
-                    <div class="skill-bar-container">
-                        <div class="skill-bar-label"><span>Mức độ thành thạo</span><span>90%</span></div>
-                        <div class="skill-bar"><div class="skill-bar-fill" data-width="90"></div></div>
-                    </div>
-                </div>
-                <div class="skill-card reveal reveal-delay-1">
-                    <div class="skill-icon">🐔</div>
-                    <h3>Chăn nuôi Gia cầm</h3>
-                    <p>Tiêm vaccine, phòng bệnh, quản lý chuồng trại và đánh giá hiệu quả miễn dịch</p>
-                    <div class="skill-bar-container">
-                        <div class="skill-bar-label"><span>Mức độ thành thạo</span><span>85%</span></div>
-                        <div class="skill-bar"><div class="skill-bar-fill" data-width="85"></div></div>
-                    </div>
-                </div>
-                <div class="skill-card reveal reveal-delay-2">
-                    <div class="skill-icon">📊</div>
-                    <h3>Kinh doanh & Tư vấn</h3>
-                    <p>Phát triển thị trường, chăm sóc khách hàng, tư vấn kỹ thuật dinh dưỡng & thú y</p>
-                    <div class="skill-bar-container">
-                        <div class="skill-bar-label"><span>Mức độ thành thạo</span><span>80%</span></div>
-                        <div class="skill-bar"><div class="skill-bar-fill" data-width="80"></div></div>
-                    </div>
-                </div>
-                <div class="skill-card reveal reveal-delay-3">
-                    <div class="skill-icon">🔬</div>
-                    <h3>Nghiên cứu Khoa học</h3>
-                    <p>Phương pháp nghiên cứu, phân tích dữ liệu, viết báo cáo và đề tài khoa học</p>
-                    <div class="skill-bar-container">
-                        <div class="skill-bar-label"><span>Mức độ thành thạo</span><span>75%</span></div>
-                        <div class="skill-bar"><div class="skill-bar-fill" data-width="75"></div></div>
-                    </div>
-                </div>
-                <div class="skill-card reveal reveal-delay-4">
-                    <div class="skill-icon">💻</div>
-                    <h3>Tin học Văn phòng</h3>
-                    <p>Thành thạo Microsoft Office (Word, Excel, PowerPoint), phần mềm quản lý trang trại</p>
-                    <div class="skill-bar-container">
-                        <div class="skill-bar-label"><span>Mức độ thành thạo</span><span>85%</span></div>
-                        <div class="skill-bar"><div class="skill-bar-fill" data-width="85"></div></div>
-                    </div>
-                </div>
-                <div class="skill-card reveal reveal-delay-5">
-                    <div class="skill-icon">🌐</div>
-                    <h3>Tiếng Anh B1</h3>
-                    <p>Giao tiếp cơ bản, đọc hiểu tài liệu chuyên ngành và hướng dẫn kỹ thuật quốc tế</p>
-                    <div class="skill-bar-container">
-                        <div class="skill-bar-label"><span>Mức độ thành thạo</span><span>70%</span></div>
-                        <div class="skill-bar"><div class="skill-bar-fill" data-width="70"></div></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== ACHIEVEMENTS SECTION ===== -->
-    <section class="section achievements" id="achievements">
-        <div class="section-container">
-            <div class="section-header reveal">
-                <div class="section-tag">Thành tích</div>
-                <h2 class="section-title">Giải Thưởng & Hoạt Động</h2>
-                <p class="section-desc">Những dấu ấn nổi bật trong học tập, thể thao và hoạt động ngoại khóa</p>
-            </div>
-            <div class="achievement-grid">
-                <div class="achievement-card reveal">
-                    <div class="achievement-icon">🥇</div>
-                    <div>
-                        <h3>Huy chương Vàng Nhảy Cao</h3>
-                        <p>Đại hội Thể dục Thể thao tỉnh Cà Mau — Thành tích thể thao xuất sắc, thể hiện tinh thần kỷ luật và nỗ lực vượt bậc.</p>
-                    </div>
-                </div>
-                <div class="achievement-card reveal reveal-delay-1">
-                    <div class="achievement-icon">🏐</div>
-                    <div>
-                       
+                        <h3>Thực tập sinh Chăn Nuôi Heo Công Nghiệp</h3>
+                        <p class="company">Trại heo 12.000 n
