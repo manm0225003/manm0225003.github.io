@@ -1,79 +1,253 @@
-```prompt
-You are a world-class full-stack web developer and UI/UX designer specializing in creative personal portfolio websites. Your task is to create a **single, standalone index.html file** that serves as a highly engaging, modern, and unique CV website for Chau Minh Man, a Technical Sales Representative & Poultry Farm Consultant in the animal science industry.
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CV - Châu Minh Mẫn</title>
 
-### Key Requirements:
-- **Output Format**: Provide ONLY the complete, self-contained **index.html** code. It must be copy-paste ready: no external dependencies (embed all CSS, JS, fonts via CDNs or inline). Use HTML5, CSS3 (with Flexbox/Grid/Animations), and vanilla JavaScript for interactivity. Ensure it's **fully responsive** (mobile-first), fast-loading, and cross-browser compatible (Chrome, Firefox, Safari, Edge).
-- **Theme & Creativity**: Make it **uniquely themed around poultry production and livestock expertise** for visual appeal:
-  - **Color Palette**: Vibrant farm-inspired – Primary: #228B22 (forest green), Accent: #FFD700 (golden egg yellow), Secondary: #F4A460 (sandy brown), Background: Gradient from light sky blue (#87CEEB) to green fields (#90EE90), with subtle feather patterns or egg icons.
-  - **Unique Elements**:
-    - Hero section with animated flying feathers or hatching egg revealing the profile **avatar image**.
-    - Parallax scrolling background with subtle farm imagery (e.g., poultry farm silhouette).
-    - Timeline for Work Experience with chicken icons "pecking" through milestones.
-    - Interactive skill cards that "grow" like poultry on hover (scale + glow).
-    - Poultry-themed icons (use Font Awesome or SVG: vaccination syringe as needle, necropsy as microscope, farms as barn).
-    - Smooth page transitions, scroll-triggered animations (e.g., elements fade/slide in using Intersection Observer).
-    - Dark mode toggle (feather switch) for accessibility.
-    - Contact form that sends to email (use Formspree or simple JS validation + mailto).
-  - **Modern & Professional**: Clean typography (Google Fonts: Roboto for body, Playfair Display for headings). Add micro-interactions (hover effects, loading spinner).
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-### CV Content (Use EXACTLY this data, no changes):
-**Header/Contact**:
-- Name: Chau Minh Man
-- Title: Technical Sales Representative & Poultry Farm Consultant
-- Email: ManM0225003@Student.ctu.edu.vn
-- Phone: +84 932 872 890
-- LinkedIn: linkedin.com/in/chauminhman
-- Location: Dong Nai, Vietnam
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
 
-**Profile**:
-Results-driven Animal Science graduate with hands-on expertise in poultry vaccination, necropsy, and disease diagnosis. Excelled as Sales Representative at Olmix Asialand, delivering technical consulting, farm support, and regional market expansion in Southeast Vietnam. Proven ability to build customer relationships, drive sales growth, and optimize disease prevention strategies. Pursuing Master's to deepen poultry production knowledge. Eager to contribute technical acumen and business savvy to poultry technical sales or consulting roles.
+body {
+    background: linear-gradient(135deg, #020617, #0f172a);
+    color: #e2e8f0;
+    overflow-x: hidden;
+}
 
-**Avatar Image**: 
-- Place a **prominent circular avatar image** (200x200px on desktop, responsive on mobile) in the Hero/Profile section.
-- Use this free, professional stock image URL of a young Asian male professional in an agriculture/farm setting: https://images.unsplash.com/photo-1552053831-71594a27632d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80
-- Style it with: Border-radius 50%, subtle shadow, hover effect (scale 1.05 + golden glow), feather-pattern frame animation on load.
+/* CONTAINER */
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+}
 
-**Education**:
-- Master of Science in Animal Science (Course 32), Can Tho University, Vietnam | In Progress (Expected 2026)
-- Bachelor of Science in Animal Science, Can Tho University, Vietnam | 2024
+/* HEADER */
+header {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 40px 0;
+}
 
-**Work Experience**:
-- **Sales Representative**, Olmix Asialand, Dong Nai – Southeast Region, Vietnam, July 2024 – Present
-  - Delivered technical consulting and support to poultry farms, enhancing disease prevention and operational efficiency through customized vaccination programs.
-  - Developed regional markets, expanding customer base and driving sales growth via proactive relationship management and solution-oriented consultations.
-  - Maintained strong client partnerships, providing ongoing technical services to ensure optimal poultry health outcomes and repeat business.
-- **Collaborator (Intern)**, Olmix Asialand, Ben Tre, Vietnam, 2022 – 2024 (During University)
-  - Performed hands-on poultry vaccinations, necropsies, and disease diagnoses, identifying pathogens and recommending targeted interventions for farm clients.
-  - Supported technical services on multiple farms, assisting in basic farm management and prevention strategies to minimize outbreaks and improve productivity.
-  - Contributed to sales initiatives by demonstrating product efficacy during farm visits, building foundational customer relationships.
+/* AVATAR */
+.avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid #38bdf8;
+    box-shadow: 0 0 30px rgba(56,189,248,0.6);
+    transition: 0.4s;
+}
 
-**Technical Skills**:
-- Poultry vaccination techniques and protocols
-- Necropsy procedures and poultry disease diagnosis
-- Farm management and biosecurity measures
-- Disease prevention and control strategies
-- Technical customer consulting and sales support
-- Poultry production optimization
+.avatar:hover {
+    transform: scale(1.1) rotate(5deg);
+}
 
-**Certifications**:
-- IT Certificate, [Issuing Authority], 2023
-- English Proficiency: B1 Level, [Issuing Authority], 2023
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
-### Website Structure (Sections in Order):
-1. **Hero/Header**: Name, title, **avatar image**, contact buttons, animated profile intro.
-2. **About/Profile**: Full profile text below/aside the avatar.
-3. **Education**: Cards or timeline.
-4. **Experience**: Interactive vertical timeline with icons.
-5. **Skills**: Grid of hover-animated cards with progress bars or icons.
-6. **Certifications**: Icon list with badges.
-7. **Contact**: Form + social links.
-8. **Footer**: Copyright, back-to-top button.
+/* TEXT */
+.header-text h1 {
+    font-size: 38px;
+    color: #38bdf8;
+}
 
-### Additional Features:
-- **SEO/ATS Optimized**: Semantic HTML (sections, articles), meta tags, keywords like "poultry vaccination", "disease diagnosis", "technical sales poultry".
-- **Performance**: Lazy-load images (including avatar), minified CSS/JS inline.
-- **Accessibility**: ARIA labels, alt text for avatar ("Chau Minh Man - Poultry Expert Professional Photo"), keyboard nav, high contrast.
-- **Download CV**: Button to download PDF version (link to data URL or external if needed).
+.header-text p {
+    color: #94a3b8;
+}
 
-Make it **stand out as the most creative poultry CV site ever** – fun yet professional, turning technical expertise into a visual "farm-to-table" journey with the avatar as the "star farmer". End with a call-to-action: "Hire the Poultry Pro!"
-```
+/* BUTTON */
+.btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 18px;
+    background: #38bdf8;
+    color: #020617;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #0ea5e9;
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* CARD */
+.card {
+    background: rgba(30,41,59,0.6);
+    backdrop-filter: blur(12px);
+    padding: 20px;
+    border-radius: 16px;
+    transition: 0.4s;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+}
+
+.card h2 {
+    margin-bottom: 10px;
+    color: #38bdf8;
+}
+
+/* PROGRESS BAR */
+.skill {
+    margin: 10px 0;
+}
+
+.bar {
+    height: 8px;
+    background: #1e293b;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.bar div {
+    height: 100%;
+    background: #38bdf8;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    margin-top: 30px;
+    color: #64748b;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<header>
+    <div class="avatar">
+        <img src="avatar.jpg">
+    </div>
+
+    <div class="header-text">
+        <h1>Châu Minh Mẫn</h1>
+        <p>Animal Science | Sales Representative</p>
+        <p>📍 Cà Mau | 🎂 13/01/2001</p>
+
+        <a href="cv.pdf" class="btn" download>📄 Tải CV</a>
+
+        <p style="margin-top:10px;">
+            <a href="#" style="color:#38bdf8;">LinkedIn</a> |
+            <a href="#" style="color:#38bdf8;">Facebook</a>
+        </p>
+    </div>
+</header>
+
+<div class="grid">
+
+<div class="card">
+<h2>Học Vấn</h2>
+<p>ĐH Cần Thơ - Animal Science (2024)</p>
+<p>Thạc sĩ Animal Science (đang học)</p>
+</div>
+
+<div class="card">
+<h2>Kinh Nghiệm</h2>
+<ul>
+<li>NewHope - Trại heo 12,000 nái</li>
+<li>Mavin - Trại heo</li>
+<li>Olmix Asialand - Vaccine gia cầm</li>
+<li>Sales khu vực miền Đông</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>Kỹ Năng</h2>
+
+<div class="skill">Sales
+<div class="bar"><div style="width:90%"></div></div>
+</div>
+
+<div class="skill">Tiêm vaccine
+<div class="bar"><div style="width:85%"></div></div>
+</div>
+
+<div class="skill">Chăn nuôi
+<div class="bar"><div style="width:80%"></div></div>
+</div>
+
+<div class="skill">Phân tích
+<div class="bar"><div style="width:75%"></div></div>
+</div>
+
+</div>
+
+<div class="card">
+<h2>Chứng Chỉ</h2>
+<ul>
+<li>Tin học</li>
+<li>Tiếng Anh B1</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>Thành Tích</h2>
+<ul>
+<li>🥇 Nhảy cao - Cà Mau</li>
+<li>🏐 Đội bóng chuyền ĐHCT</li>
+</ul>
+</div>
+
+</div>
+
+<footer>
+<p>© 2026 - CV Online</p>
+</footer>
+
+</div>
+
+<script>
+const cards = document.querySelectorAll('.card');
+
+window.addEventListener('scroll', () => {
+    cards.forEach(card => {
+        const top = card.getBoundingClientRect().top;
+        if(top < window.innerHeight - 50) {
+            card.classList.add('show');
+        }
+    });
+});
+</script>
+
+</body>
+</html>
