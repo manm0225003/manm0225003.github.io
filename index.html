@@ -1,230 +1,692 @@
+```html
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Châu Minh Mẫn | Technical Sales & Poultry Consultant</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chau Minh Man - Chuyên gia kỹ thuật và kinh doanh trong Chăn Nuôi</title>
+    <meta name="description" content="CV cá nhân của Chau Minh Man - Tốt nghiệp Khoa học Chăn nuôi ĐH Cần Thơ. Kinh nghiệm thực tiễn tiêm chủng, chẩn đoán bệnh gia cầm tại Olmix Asialand. Sẵn sàng đóng góp cho lĩnh vực nông nghiệp, chăn nuôi.">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #4A90E2;
+            --secondary: #F5F7FA;
+            --accent: #7ED321;
+            --text-dark: #2C3E50;
+            --text-light: #7F8C8D;
+            --white: #FFFFFF;
+            --shadow: 0 10px 30px rgba(74, 144, 226, 0.2);
+            --border: #E3F2FD;
+        }
 
-<meta name="description" content="Châu Minh Mẫn - Technical Sales & Poultry Consultant">
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background: linear-gradient(135deg, var(--secondary) 0%, #E8F5E8 100%);
+            overflow-x: hidden;
+        }
 
-<style>
-:root{
-  --primary:#0f172a;
-  --accent:#16a34a;
-  --bg:#f8fafc;
-}
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+        }
 
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
 
-body{
-  font-family:'Inter',sans-serif;
-  background:var(--bg);
-  color:#111;
-  line-height:1.6;
-}
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-.container{max-width:1100px;margin:auto;padding:20px}
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
 
-/* HEADER */
-header{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  flex-wrap:wrap;
-  gap:20px;
-  border-bottom:1px solid #ddd;
-  padding-bottom:20px;
-}
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
 
-/* AVATAR */
-.avatar{
-  width:140px;height:140px;
-  border-radius:50%;
-  overflow:hidden;
-  border:3px solid var(--accent);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:40px;
-  color:#555;
-}
-.avatar img{
-  width:100%;height:100%;
-  object-fit:cover;
-}
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
 
-/* GRID */
-.grid{
-  display:grid;
-  grid-template-columns:2fr 1fr;
-  gap:30px;
-}
+        .nav-menu a:hover {
+            color: var(--primary);
+        }
 
-.card{
-  background:white;
-  padding:20px;
-  border-radius:12px;
-  border:1px solid #eee;
-  margin-bottom:20px;
-}
+        .menu-toggle {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--primary);
+        }
 
-/* TEXT */
-h1{font-size:32px;color:var(--primary)}
-h2{margin-bottom:10px;color:var(--accent)}
-h3{margin-top:10px}
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(rgba(74, 144, 226, 0.8), rgba(126, 211, 33, 0.6)), url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2aWV3Qm94PSIwIDAgMTAwIDUwIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXR0ZXJuIGlkPSJncmFzcyIgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIj48Y2lyY2xlIGN4PSIyMCIgY3k9IjIwIiByPSIxMCIgZmlsbD0iIzdlZDMyMSIgb3BhY2l0eT0iMC4zIi8+PHJlY3QgeD0iMTAiIHk9IjMwIiB3aWR0aD0iMjAiIGhlaWdodD0iMTAiIGZpbGw9IiM3ZWQzMjEiIG9wYWNpdHk9IjAuMiIvPjwvcGF0dGVybj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYXNzKSIvPjwvc3ZnPg==');
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
 
-/* LIST */
-ul{padding-left:20px}
-li{margin-bottom:6px}
+        .hero-content {
+            max-width: 800px;
+            padding: 0 2rem;
+            animation: fadeInUp 1s ease-out;
+        }
 
-/* BUTTON */
-.btn{
-  display:inline-block;
-  margin-top:10px;
-  padding:8px 14px;
-  background:var(--accent);
-  color:white;
-  border-radius:6px;
-  text-decoration:none;
-}
+        .avatar {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            margin: 0 auto 2rem;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 5px solid rgba(255,255,255,0.3);
+        }
 
-/* ANIMATION */
-.fade{
-  opacity:0;
-  transform:translateY(20px);
-  transition:0.6s;
-}
-.fade.show{
-  opacity:1;
-  transform:translateY(0);
-}
+        .avatar ipg {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
 
-/* RESPONSIVE */
-@media(max-width:768px){
-  .grid{grid-template-columns:1fr}
-  header{flex-direction:column;text-align:center}
-}
+        .avatar:hover {
+            transform: scale(1.05);
+            box-shadow: 0 20px 40px rgba(255,255,255,0.3);
+        }
 
-/* PRINT */
-@media print{
-  .btn{display:none}
-}
-</style>
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        .hero-title {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            opacity: 0.9;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background: var(--accent);
+            color: var(--white);
+            padding: 1rem 2.5rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(126, 211, 33, 0.4);
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(126, 211, 33, 0.6);
+        }
+
+        /* Sections */
+        section {
+            padding: 5rem 0;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: var(--primary);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: var(--accent);
+            margin: 1rem auto;
+            border-radius: 2px;
+        }
+
+        /* About */
+        .about {
+            background: var(--white);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .profile-text {
+            font-size: 1.1rem;
+            text-align: justify;
+        }
+
+        /* Timeline Experience */
+        .experience {
+            background: var(--secondary);
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--primary);
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin: 2rem 0;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.6s ease;
+        }
+
+        .timeline-item.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .timeline-item:nth-child(odd) {
+            transform: translateX(-50%) translateY(50px);
+        }
+
+        .timeline-item:nth-child(even) {
+            transform: translateX(50%) translateY(50px);
+        }
+
+        .timeline-content {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            position: relative;
+            width: 45%;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content {
+            margin-left: auto;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content {
+            margin-right: auto;
+        }
+
+        .timeline-icon {
+            position: absolute;
+            top: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 50px;
+            background: var(--accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.2rem;
+            box-shadow: 0 5px 15px rgba(126, 211, 33, 0.4);
+        }
+
+        /* Skills */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .skill-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: all 0.3s ease;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .skill-card.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .skill-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(74, 144, 226, 0.3);
+        }
+
+        .skill-icon {
+            font-size: 3rem;
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+
+        /* Certifications */
+        .certs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .cert-card {
+            background: linear-gradient(135deg, var(--primary), #5AB8FF);
+            color: var(--white);
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
+        }
+
+        .cert-card:hover {
+            transform: scale(1.05);
+        }
+
+        /* Contact */
+        .contact {
+            background: var(--white);
+            text-align: center;
+        }
+
+        .contact form {
+            max-width: 600px;
+            margin: 0 auto;
+            display: grid;
+            gap: 1rem;
+        }
+
+        .contact input, .contact textarea {
+            padding: 1rem;
+            border: 2px solid var(--border);
+            border-radius: 10px;
+            font-family: inherit;
+            transition: border-color 0.3s ease;
+        }
+
+        .contact input:focus, .contact textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--text-dark);
+            color: var(--white);
+            text-align: center;
+            padding: 2rem;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav-menu {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 70px);
+                background: var(--white);
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+                padding-top: 2rem;
+                transition: left 0.3s ease;
+            }
+
+            .nav-menu.active {
+                left: 0;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .avatar {
+                width: 140px;
+                height: 140px;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .timeline::before {
+                left: 20px;
+            }
+
+            .timeline-content {
+                width: calc(100% - 60px);
+                margin-left: 60px !important;
+            }
+
+            .timeline-item:nth-child(even) .timeline-content {
+                margin-left: 60px !important;
+            }
+
+            .timeline-icon {
+                left: 20px;
+            }
+        }
+
+        /* Scroll Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
 </head>
-
 <body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">CMM</div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home">Trang chủ</a></li>
+                <li><a href="#about">Giới thiệu</a></li>
+                <li><a href="#experience">Kinh nghiệm</a></li>
+                <li><a href="#education">Học vấn</a></li>
+                <li><a href="#skills">Kỹ năng</a></li>
+                <li><a href="#certs">Chứng chỉ</a></li>
+                <li><a href="#contact">Liên hệ</a></li>
+            </ul>
+            <div class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
 
-<div class="container">
+    <!-- Hero -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="avatar">
+                <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80" alt="Chau Minh Man - Chuyên gia Gia cầm">
+            </div>
+            <h1>Châu Minh Mẫn</h1>
+            <p class="hero-title">Chuyên viên Kinh doanh Kỹ thuật & Tư vấn Trang trại Gia cầm</p>
+            <a href="#contact" class="cta-btn">Liên hệ ngay</a>
+        </div>
+    </section>
 
-<header>
-<div>
-<h1>Châu Minh Mẫn</h1>
-<p><strong>Technical Sales & Poultry Farm Consultant</strong></p>
+    <!-- About -->
+    <section id="about" class="about">
+        <h2 class="section-title">Giới thiệu bản thân</h2>
+        <div class="about-content">
+            <div class="profile-text fade-in">
+                <p>Tốt nghiệp Cử nhân Khoa học Chăn nuôi tại Đại học Cần Thơ năm 2024, hiện đang theo học Thạc sĩ Khoa học Chăn nuôi (Khóa 32). Với kinh nghiệm thực tiễn tại Olmix Asialand, tôi sở hữu chuyên môn sâu về kỹ thuật tiêm chủng gia cầm, khám nghiệm tử thi và chẩn đoán bệnh. Đã hỗ trợ hàng loạt trang trại tại khu vực Đông Nam Bộ và Bến Tre, thúc đẩy tăng trưởng doanh số và tối ưu hóa quy trình sản xuất bền vững.</p>
+                <p>Năng động, đam mê lĩnh vực chăn nuôi gia cầm, tôi cam kết mang đến giải pháp kỹ thuật tiên tiến kết hợp với kỹ năng kinh doanh, góp phần nâng cao hiệu quả kinh tế cho các doanh nghiệp nông nghiệp.</p>
+            </div>
+            <div style="text-align: center;">
+                <div class="avatar" style="width: 250px; height: 250px; margin: 0 auto;">
+                    <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="Chau Minh Man">
+                </div>
+            </div>
+        </div>
+    </section>
 
-<address>
-📍 Cà Mau, Việt Nam<br>
-📞 <a href="tel:0932872890">0932872890</a><br>
-📧 <a href="mailto:ManM0225003@Student.ctu.edu.vn">ManM0225003@Student.ctu.edu.vn</a><br>
-🔗 <a href="#">linkedin.com/in/username</a>
-</address>
+    <!-- Experience -->
+    <section id="experience" class="experience">
+        <h2 class="section-title">Kinh nghiệm làm việc</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-icon">
+                    <i class="fas fa-briefcase"></i>
+                </div>
+                <div class="timeline-content fade-in">
+                    <h3>Nhân viên Kinh doanh Kỹ thuật</h3>
+                    <p><strong>Olmix Asialand, Đồng Nai – Khu vực Đông Nam Bộ</strong> <br> Tháng 7/2024 – Nay</p>
+                    <ul>
+                        <li>Cung cấp tư vấn kỹ thuật và hỗ trợ trang trại gia cầm, nâng cao phòng ngừa bệnh qua chương trình tiêm chủng tùy chỉnh.</li>
+                        <li>Phát triển thị trường khu vực, mở rộng cơ sở khách hàng và thúc đẩy tăng trưởng doanh số thông qua quản lý quan hệ khách hàng chủ động.</li>
+                        <li>Duy trì đối tác lâu dài, đảm bảo dịch vụ kỹ thuật liên tục để tối ưu hóa sức khỏe gia cầm và doanh thu lặp lại.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-icon">
+                    <i class="fas fa-user-graduate"></i>
+                </div>
+                <div class="timeline-content fade-in">
+                    <h3>Thực tập sinh / Cộng tác viên</h3>
+                    <p><strong>Olmix Asialand, Bến Tre</strong> <br> 2022 – 2024 (Thời gian sinh viên)</p>
+                    <ul>
+                        <li>Thực hiện tiêm chủng gia cầm thực tế, khám nghiệm tử thi và chẩn đoán bệnh, xác định tác nhân gây bệnh và đề xuất can thiệp kịp thời.</li>
+                        <li>Hỗ trợ dịch vụ kỹ thuật tại nhiều trang trại, quản lý cơ bản và chiến lược phòng ngừa để giảm thiểu dịch bệnh và tăng năng suất.</li>
+                        <li>Đóng góp vào hoạt động kinh doanh bằng cách trình diễn hiệu quả sản phẩm tại trang trại, xây dựng nền tảng quan hệ khách hàng.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<button class="btn" onclick="window.print()">📄 In / Save PDF</button>
-</div>
+    <!-- Education -->
+    <section id="education" class="about">
+        <h2 class="section-title">Học vấn</h2>
+        <div class="skills-grid">
+            <div class="skill-card fade-in">
+                <div class="skill-icon"><i class="fas fa-graduation-cap"></i></div>
+                <h3>Thạc sĩ Khoa học Chăn nuôi (Khóa 32)</h3>
+                <p>Đại học Cần Thơ, Việt Nam<br><em>Đang theo học (Dự kiến hoàn thành 2026)</em></p>
+            </div>
+            <div class="skill-card fade-in">
+                <div class="skill-icon"><i class="fas fa-award"></i></div>
+                <h3>Cử nhân Khoa học Chăn nuôi</h3>
+                <p>Đại học Cần Thơ, Việt Nam<br><em>Tốt nghiệp 2024</em></p>
+            </div>
+        </div>
+    </section>
 
-<!-- Avatar: thay images/avatar.jpg bằng ảnh của bạn -->
-<div class="avatar">
-<img src="images/avatar.jpg" alt="Professional headshot of Chau Minh Man"
-onerror="this.style.display='none'; this.parentElement.innerHTML='CM';">
-</div>
+    <!-- Skills -->
+    <section id="skills" class="experience">
+        <h2 class="section-title">Kỹ năng chuyên môn</h2>
+        <div class="skills-grid">
+            <div class="skill-card fade-in">
+                <div class="skill-icon"><i class="fas fa-syringe"></i></div>
+                <h3>Kỹ thuật tiêm chủng gia cầm</h3>
+                <p>Thành thạo các quy trình tiêm chủng và giao thức bảo vệ sức khỏe gia cầm.</p>
+            </div>
+            <div class="skill-card fade-in">
+                <div class="skill-icon"><i class="fas fa-microscope"></i></div>
+                <h3>Khám nghiệm & Chẩn đoán bệnh</h3>
+                <p>Chuyên sâu về necropsy và chẩn đoán bệnh gia cầm chính xác.</p>
+            </div>
+            <div class="skill-card fade-in">
+                <div class="skill-icon"><i class="fas fa-tractor"></i></div>
+                <h3>Quản lý trang trại & Sinh an toàn</h3>
+                <p>Quản lý cơ bản trang trại và biện pháp sinh an toàn hiệu quả.</p>
+            </div>
+            <div class="skill-card fade-in">
+                <div class="skill-icon"><i class="fas fa-chart-line"></i></div>
+                <h3>Tư vấn kỹ thuật & Kinh doanh</h3>
+                <p>Tư vấn khách hàng, phát triển thị trường và hỗ trợ bán hàng.</p>
+            </div>
+            <div class="skill-card fade-in">
+                <div class="skill-icon"><i class="fas fa-shield-alt"></i></div>
+                <h3>Phòng ngừa & Kiểm soát bệnh</h3>
+                <p>Chiến lược kiểm soát dịch bệnh và phòng ngừa tiên tiến.</p>
+            </div>
+            <div class="skill-card fade-in">
+                <div class="skill-icon"><i class="fas fa-cogs"></i></div>
+                <h3>Tối ưu hóa sản xuất gia cầm</h3>
+                <p>Tăng cường năng suất và hiệu quả sản xuất bền vững.</p>
+            </div>
+        </div>
+    </section>
 
-</header>
+    <!-- Certifications -->
+    <section id="certs" class="about">
+        <h2 class="section-title">Chứng chỉ</h2>
+        <div class="certs-grid">
+            <div class="cert-card fade-in">
+                <i class="fas fa-certificate" style="font-size: 3rem; margin-bottom: 1rem;"></i>
+                <h3>Chứng chỉ Tin học</h3>
+                <p>[Cơ quan cấp], 2023</p>
+            </div>
+            <div class="cert-card fade-in">
+                <i class="fas fa-globe" style="font-size: 3rem; margin-bottom: 1rem;"></i>
+                <h3>Tiếng Anh trình độ B1</h3>
+                <p>[Cơ quan cấp], 2023</p>
+            </div>
+        </div>
+    </section>
 
-<main class="grid">
+    <!-- Contact -->
+    <section id="contact" class="contact">
+        <h2 class="section-title">Liên hệ</h2>
+        <p style="font-size: 1.2rem; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+            Sẵn sàng thảo luận cơ hội hợp tác trong lĩnh vực chăn nuôi gia cầm và nông nghiệp bền vững.
+        </p>
+        <div style="display: flex; gap: 1rem; justify-content: center; margin-bottom: 2rem; font-size: 1.1rem;">
+            <a href="mailto:ManM0225003@Student.ctu.edu.vn" style="color: var(--primary);"><i class="fas fa-envelope"></i> ManM0225003@Student.ctu.edu.vn</a>
+            <a href="tel:+84932872890" style="color: var(--primary);"><i class="fas fa-phone"></i> +84 932 872 890</a>
+        </div>
+        <form id="contactForm" style="max-width: 500px; margin: 0 auto;">
+            <input type="text" placeholder="Họ và tên" required>
+            <input type="email" placeholder="Email" required>
+            <textarea rows="5" placeholder="Tin nhắn của bạn" required></textarea>
+            <button type="submit" class="cta-btn" style="width: 100%;">Gửi tin nhắn</button>
+        </form>
+        <p style="margin-top: 2rem; opacity: 0.8;">Hoặc <a href="mailto:ManM0225003@Student.ctu.edu.vn" style="color: var(--primary);">liên hệ trực tiếp qua email</a></p>
+    </section>
 
-<section>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Châu Minh Mẫn. Tất cả quyền được bảo lưu. | Phát triển bởi chuyên gia front-end.</p>
+    </footer>
 
-<div class="card fade">
-<h2>Hồ sơ</h2>
-<p>Bán hàng kỹ thuật và Tư vấn trang trại với chuyên môn sản xuất gia cầm mạnh mẽ, kết hợp hỗ trợ thú y thực hành với thực hiện bán hàng thương mại. Thể hiện thành thạo trong việc tiêm phòng gia cầm, khám nghiệm tử thi và chẩn đoán bệnh để cải thiện đàn gia súc.</p>
-</div>
+    <script>
+        // Mobile Menu Toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('navMenu');
 
-<div class="card fade">
-<h2>Kinh nghiệm làm việc</h2>
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
 
-<h3>Đại diện bán hàng — Olmix Asialand</h3>
-<p>[Ngày bắt đầu] – Hiện tại</p>
-<ul>
-<li>Cung cấp tư vấn kỹ thuật và bán hàng tại trang trại.</li>
-<li>Thực hiện chương trình tiêm phòng đúng quy trình.</li>
-<li>Hỗ trợ khám nghiệm tử thi và chẩn đoán bệnh.</li>
-<li>Đào tạo nhân sự về an toàn sinh học.</li>
-<li>Duy trì và phát triển khách hàng.</li>
-<li>Mở rộng thị trường khu vực Đông Nam.</li>
-</ul>
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+                navMenu.classList.remove('active');
+            });
+        });
 
-<h3>Cộng tác viên — Olmix Asialand</h3>
-<p>[Ngày bắt đầu] – [Ngày kết thúc]</p>
-<ul>
-<li>Hỗ trợ tiêm phòng và giám sát sức khỏe đàn.</li>
-<li>Ghi nhận dữ liệu và hỗ trợ thử nghiệm trang trại.</li>
-</ul>
+        // Fade-in on Scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
 
-</div>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate', 'visible');
+                }
+            });
+        }, observerOptions);
 
-<div class="card fade">
-<h2>Học vấn</h2>
-<ul>
-<li>Cử nhân Khoa học Động vật — ĐH Cần Thơ (2024)</li>
-<li>Thạc sĩ Khoa học Động vật — Đang học</li>
-</ul>
-</div>
+        document.querySelectorAll('.fade-in, .timeline-item, .skill-card').forEach(el => {
+            observer.observe(el);
+        });
 
-</section>
+        // Contact Form
+        document.getElementById('contactForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Cảm ơn bạn! Tin nhắn đã được gửi. Tôi sẽ liên hệ sớm.');
+            e.target.reset();
+        });
 
-<aside>
-
-<div class="card fade">
-<h2>Kỹ năng</h2>
-<ul>
-<li>Tiêm phòng gia cầm</li>
-<li>Chẩn đoán bệnh</li>
-<li>Quản lý trang trại</li>
-<li>Tư vấn kỹ thuật</li>
-<li>Sales & CRM</li>
-</ul>
-</div>
-
-<div class="card fade">
-<h2>Chứng chỉ</h2>
-<ul>
-<li>Chứng chỉ CNTT — [Tổ chức phát hành]</li>
-<li>Tiếng Anh B1 — [Tổ chức phát hành]</li>
-</ul>
-</div>
-
-</aside>
-
-</main>
-
-<footer style="text-align:center;margin-top:30px">
-<p>© 2026 Châu Minh Mẫn | Poultry Technical Specialist</p>
-</footer>
-
-</div>
-
-<script>
-const els=document.querySelectorAll('.fade');
-window.addEventListener('scroll',()=>{
-  els.forEach(el=>{
-    if(el.getBoundingClientRect().top < window.innerHeight-50){
-      el.classList.add('show');
-    }
-  });
-});
-</script>
-
+        // Nav Shadow on Scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.style.background = 'rgba(255, 255, 255, 0.98)';
+                nav.style.boxShadow = '0 5px 30px rgba(0,0,0,0.15)';
+            } else {
+                nav.style.background = 'rgba(255, 255, 255, 0.95)';
+                nav.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
+            }
+        });
+    </script>
 </body>
 </html>
+```
