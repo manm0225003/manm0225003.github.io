@@ -1,217 +1,758 @@
-```html
 <!DOCTYPE html>
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chau Minh Man - Chuyên gia kỹ thuật và kinh doanh trong Chăn Nuôi</title>
-    <meta name="description" content="CV cá nhân của Chau Minh Man - Tốt nghiệp Khoa học Chăn nuôi ĐH Cần Thơ. Kinh nghiệm thực tiễn tiêm chủng, chẩn đoán bệnh gia cầm tại Olmix Asialand. Sẵn sàng đóng góp cho lĩnh vực nông nghiệp, chăn nuôi.">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>CV - Châu Minh Mẫn | Khoa Học Động Vật & Phát Triển Nông Nghiệp</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --primary: #4A90E2;
-            --secondary: #F5F7FA;
-            --accent: #7ED321;
-            --text-dark: #2C3E50;
-            --text-light: #7F8C8D;
-            --white: #FFFFFF;
-            --shadow: 0 10px 30px rgba(74, 144, 226, 0.2);
-            --border: #E3F2FD;
-        }
-
-        * {
+        /* ===== RESET & BASE ===== */
+        *, *::before, *::after {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
+        :root {
+            --cream: #FDF8F0;
+            --cream-dark: #F5EDE0;
+            --blue-primary: #1B5E8C;
+            --blue-light: #2E86C1;
+            --blue-accent: #3498DB;
+            --blue-dark: #0D3B5E;
+            --blue-soft: #E8F4FD;
+            --white: #FFFFFF;
+            --text-dark: #1A1A2E;
+            --text-medium: #4A4A68;
+            --text-light: #7A7A96;
+            --gold: #D4A843;
+            --gold-light: #F0D78C;
+            --green-soft: #27AE60;
+            --shadow-sm: 0 2px 8px rgba(27, 94, 140, 0.08);
+            --shadow-md: 0 8px 30px rgba(27, 94, 140, 0.12);
+            --shadow-lg: 0 16px 50px rgba(27, 94, 140, 0.15);
+            --shadow-xl: 0 24px 60px rgba(27, 94, 140, 0.18);
+            --radius-sm: 8px;
+            --radius-md: 14px;
+            --radius-lg: 20px;
+            --radius-xl: 28px;
+            --transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
         body {
-            font-family: 'Roboto', sans-serif;
-            line-height: 1.6;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--cream);
             color: var(--text-dark);
-            background: linear-gradient(135deg, var(--secondary) 0%, #E8F5E8 100%);
+            line-height: 1.7;
             overflow-x: hidden;
         }
 
-        h1, h2, h3 {
-            font-family: 'Playfair Display', serif;
-            font-weight: 700;
+        /* ===== SCROLLBAR ===== */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--cream-dark);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--blue-primary);
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--blue-dark);
         }
 
-        /* Navigation */
-        nav {
+        /* ===== SELECTION ===== */
+        ::selection {
+            background: var(--blue-accent);
+            color: var(--white);
+        }
+
+        /* ===== NAVIGATION ===== */
+        .navbar {
             position: fixed;
             top: 0;
+            left: 0;
             width: 100%;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
             z-index: 1000;
-            transition: all 0.3s ease;
-            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            padding: 16px 0;
+            transition: var(--transition);
+            background: transparent;
+        }
+
+        .navbar.scrolled {
+            background: rgba(253, 248, 240, 0.92);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            padding: 10px 0;
+            box-shadow: 0 4px 30px rgba(27, 94, 140, 0.1);
         }
 
         .nav-container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 1rem 2rem;
+            padding: 0 24px;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
-        .logo {
+        .nav-logo {
+            font-family: 'Playfair Display', serif;
             font-size: 1.5rem;
             font-weight: 700;
-            color: var(--primary);
+            color: var(--blue-primary);
+            text-decoration: none;
+            letter-spacing: -0.5px;
         }
 
-        .nav-menu {
+        .nav-logo span {
+            color: var(--gold);
+        }
+
+        .nav-links {
             display: flex;
             list-style: none;
-            gap: 2rem;
+            gap: 8px;
         }
 
-        .nav-menu a {
+        .nav-links a {
             text-decoration: none;
-            color: var(--text-dark);
+            color: var(--text-medium);
             font-weight: 500;
-            transition: color 0.3s ease;
+            font-size: 0.9rem;
+            padding: 8px 16px;
+            border-radius: 50px;
+            transition: var(--transition);
+            position: relative;
         }
 
-        .nav-menu a:hover {
-            color: var(--primary);
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--blue-primary);
+            background: var(--blue-soft);
         }
 
-        .menu-toggle {
+        .nav-toggle {
             display: none;
-            font-size: 1.5rem;
+            flex-direction: column;
+            gap: 5px;
             cursor: pointer;
-            color: var(--primary);
+            padding: 8px;
+            z-index: 1001;
         }
 
-        /* Hero Section */
+        .nav-toggle span {
+            width: 26px;
+            height: 2.5px;
+            background: var(--blue-primary);
+            border-radius: 2px;
+            transition: var(--transition);
+        }
+
+        .nav-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+        .nav-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+        .nav-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+
+        /* ===== HERO SECTION ===== */
         .hero {
-            height: 100vh;
+            min-height: 100vh;
             display: flex;
             align-items: center;
-            justify-content: center;
-            text-align: center;
-            background: linear-gradient(rgba(74, 144, 226, 0.8), rgba(126, 211, 33, 0.6)), url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2aWV3Qm94PSIwIDAgMTAwIDUwIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXR0ZXJuIGlkPSJncmFzcyIgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIj48Y2lyY2xlIGN4PSIyMCIgY3k9IjIwIiByPSIxMCIgZmlsbD0iIzdlZDMyMSIgb3BhY2l0eT0iMC4zIi8+PHJlY3QgeD0iMTAiIHk9IjMwIiB3aWR0aD0iMjAiIGhlaWdodD0iMTAiIGZpbGw9IiM3ZWQzMjEiIG9wYWNpdHk9IjAuMiIvPjwvcGF0dGVybj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYXNzKSIvPjwvc3ZnPg==');
-            color: var(--white);
             position: relative;
             overflow: hidden;
+            background: linear-gradient(165deg, var(--cream) 0%, var(--blue-soft) 50%, var(--cream-dark) 100%);
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 800px;
+            height: 800px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(27, 94, 140, 0.06) 0%, transparent 70%);
+            animation: floatOrb 20s ease-in-out infinite;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -10%;
+            width: 600px;
+            height: 600px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(212, 168, 67, 0.08) 0%, transparent 70%);
+            animation: floatOrb 15s ease-in-out infinite reverse;
+        }
+
+        @keyframes floatOrb {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            33% { transform: translate(30px, -40px) scale(1.05); }
+            66% { transform: translate(-20px, 20px) scale(0.95); }
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 120px 24px 80px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            position: relative;
+            z-index: 2;
         }
 
         .hero-content {
-            max-width: 800px;
-            padding: 0 2rem;
             animation: fadeInUp 1s ease-out;
         }
 
-        .avatar {
-            width: 180px;
-            height: 180px;
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--white);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--blue-primary);
+            box-shadow: var(--shadow-sm);
+            margin-bottom: 24px;
+            border: 1px solid rgba(27, 94, 140, 0.1);
+        }
+
+        .hero-badge .dot {
+            width: 8px;
+            height: 8px;
             border-radius: 50%;
-            margin: 0 auto 2rem;
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border: 5px solid rgba(255,255,255,0.3);
+            background: var(--green-soft);
+            animation: pulse 2s ease-in-out infinite;
         }
 
-        .avatar.jpg {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .avatar:hover {
-            transform: scale(1.05);
-            box-shadow: 0 20px 40px rgba(255,255,255,0.3);
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(1.3); }
         }
 
         .hero-title {
-            font-size: 1.5rem;
-            margin-bottom: 1.5rem;
-            opacity: 0.9;
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.15;
+            color: var(--text-dark);
+            margin-bottom: 8px;
         }
 
-        .cta-btn {
-            display: inline-block;
-            background: var(--accent);
-            color: var(--white);
-            padding: 1rem 2.5rem;
-            text-decoration: none;
+        .hero-title .highlight {
+            background: linear-gradient(135deg, var(--blue-primary), var(--blue-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: var(--text-medium);
+            font-weight: 400;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .hero-desc {
+            font-size: 1rem;
+            color: var(--text-light);
+            margin-bottom: 32px;
+            max-width: 500px;
+            line-height: 1.8;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 32px;
             border-radius: 50px;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            box-shadow: 0 5px 15px rgba(126, 211, 33, 0.4);
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-decoration: none;
+            transition: var(--transition);
+            cursor: pointer;
+            border: none;
+            font-family: 'Inter', sans-serif;
         }
 
-        .cta-btn:hover {
+        .btn-primary {
+            background: linear-gradient(135deg, var(--blue-primary), var(--blue-light));
+            color: var(--white);
+            box-shadow: 0 8px 25px rgba(27, 94, 140, 0.3);
+        }
+
+        .btn-primary:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(126, 211, 33, 0.6);
+            box-shadow: 0 12px 35px rgba(27, 94, 140, 0.4);
         }
 
-        /* Sections */
-        section {
-            padding: 5rem 0;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding-left: 2rem;
-            padding-right: 2rem;
+        .btn-outline {
+            background: var(--white);
+            color: var(--blue-primary);
+            border: 2px solid rgba(27, 94, 140, 0.2);
         }
 
-        .section-title {
+        .btn-outline:hover {
+            background: var(--blue-soft);
+            border-color: var(--blue-primary);
+            transform: translateY(-3px);
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 32px;
+            margin-top: 40px;
+            padding-top: 32px;
+            border-top: 1px solid rgba(27, 94, 140, 0.1);
+        }
+
+        .stat-item {
             text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-            color: var(--primary);
+        }
+
+        .stat-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--blue-primary);
+        }
+
+        .stat-label {
+            font-size: 0.8rem;
+            color: var(--text-light);
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .hero-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: fadeInRight 1s ease-out 0.3s both;
+        }
+
+        .avatar-wrapper {
+            position: relative;
+            width: 380px;
+            height: 380px;
+        }
+
+        .avatar-ring {
+            position: absolute;
+            inset: -12px;
+            border-radius: 50%;
+            border: 3px dashed rgba(27, 94, 140, 0.15);
+            animation: spin 30s linear infinite;
+        }
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .avatar-ring-2 {
+            position: absolute;
+            inset: -28px;
+            border-radius: 50%;
+            border: 2px dashed rgba(212, 168, 67, 0.12);
+            animation: spin 40s linear infinite reverse;
+        }
+
+        .avatar-img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid var(--white);
+            box-shadow: var(--shadow-xl);
+            position: relative;
+            z-index: 2;
+            background: linear-gradient(135deg, var(--blue-soft), var(--cream-dark));
+        }
+
+        .avatar-decoration {
+            position: absolute;
+            z-index: 3;
+            background: var(--white);
+            border-radius: var(--radius-md);
+            padding: 12px 18px;
+            box-shadow: var(--shadow-md);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .avatar-decoration .icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+        }
+
+        .deco-1 {
+            top: 20px;
+            right: -30px;
+            animation-delay: 0s;
+        }
+
+        .deco-1 .icon {
+            background: linear-gradient(135deg, #E8F5E9, #C8E6C9);
+        }
+
+        .deco-2 {
+            bottom: 40px;
+            left: -40px;
+            animation-delay: 1.5s;
+        }
+
+        .deco-2 .icon {
+            background: linear-gradient(135deg, #FFF3E0, #FFE0B2);
+        }
+
+        .deco-3 {
+            bottom: -10px;
+            right: 20px;
+            animation-delay: 3s;
+        }
+
+        .deco-3 .icon {
+            background: linear-gradient(135deg, #E3F2FD, #BBDEFB);
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInRight {
+            from { opacity: 0; transform: translateX(40px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        /* ===== SECTION COMMON ===== */
+        .section {
+            padding: 100px 24px;
             position: relative;
         }
 
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 80px;
-            height: 4px;
-            background: var(--accent);
-            margin: 1rem auto;
-            border-radius: 2px;
+        .section-container {
+            max-width: 1100px;
+            margin: 0 auto;
         }
 
-        /* About */
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--blue-primary);
+            margin-bottom: 12px;
+        }
+
+        .section-tag::before,
+        .section-tag::after {
+            content: '';
+            width: 30px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--blue-primary));
+        }
+
+        .section-tag::after {
+            background: linear-gradient(90deg, var(--blue-primary), transparent);
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 16px;
+        }
+
+        .section-desc {
+            font-size: 1.05rem;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* ===== ABOUT SECTION ===== */
         .about {
             background: var(--white);
         }
 
-        .about-content {
+        .about-grid {
             display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 3rem;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: start;
+        }
+
+        .about-text h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            color: var(--text-dark);
+            margin-bottom: 16px;
+        }
+
+        .about-text p {
+            color: var(--text-medium);
+            margin-bottom: 16px;
+            line-height: 1.8;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-top: 24px;
+        }
+
+        .info-item {
+            display: flex;
             align-items: center;
+            gap: 12px;
+            padding: 14px 18px;
+            background: var(--cream);
+            border-radius: var(--radius-sm);
+            transition: var(--transition);
         }
 
-        .profile-text {
+        .info-item:hover {
+            background: var(--blue-soft);
+            transform: translateX(4px);
+        }
+
+        .info-item .info-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, var(--blue-primary), var(--blue-light));
+            display: flex;
+            align-items: center;
+            justify-content: center;
             font-size: 1.1rem;
-            text-align: justify;
+            flex-shrink: 0;
         }
 
-        /* Timeline Experience */
+        .info-item .info-label {
+            font-size: 0.75rem;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .info-item .info-value {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .about-highlights {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .highlight-card {
+            padding: 24px;
+            background: var(--cream);
+            border-radius: var(--radius-md);
+            border-left: 4px solid var(--blue-primary);
+            transition: var(--transition);
+        }
+
+        .highlight-card:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-4px);
+            border-left-color: var(--gold);
+        }
+
+        .highlight-card h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 6px;
+        }
+
+        .highlight-card p {
+            font-size: 0.9rem;
+            color: var(--text-medium);
+            line-height: 1.7;
+        }
+
+        /* ===== EDUCATION SECTION ===== */
+        .education {
+            background: linear-gradient(180deg, var(--cream) 0%, var(--white) 100%);
+        }
+
+        .edu-cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .edu-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: 36px;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(27, 94, 140, 0.06);
+        }
+
+        .edu-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--blue-primary), var(--blue-light));
+        }
+
+        .edu-card:hover {
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-6px);
+        }
+
+        .edu-card.master::before {
+            background: linear-gradient(90deg, var(--gold), var(--gold-light));
+        }
+
+        .edu-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        .edu-card:not(.master) .edu-icon {
+            background: linear-gradient(135deg, var(--blue-soft), #D6EAF8);
+        }
+
+        .edu-card.master .edu-icon {
+            background: linear-gradient(135deg, #FFF8E1, #FFECB3);
+        }
+
+        .edu-degree {
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--blue-primary);
+            margin-bottom: 6px;
+        }
+
+        .edu-card.master .edu-degree {
+            color: var(--gold);
+        }
+
+        .edu-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 8px;
+        }
+
+        .edu-school {
+            font-size: 0.95rem;
+            color: var(--text-medium);
+            margin-bottom: 4px;
+        }
+
+        .edu-year {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            font-weight: 500;
+        }
+
+        .edu-details {
+            margin-top: 16px;
+            padding-top: 16px;
+            border-top: 1px solid rgba(27, 94, 140, 0.08);
+        }
+
+        .edu-details li {
+            font-size: 0.88rem;
+            color: var(--text-medium);
+            margin-bottom: 6px;
+            padding-left: 20px;
+            position: relative;
+            list-style: none;
+        }
+
+        .edu-details li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: var(--blue-primary);
+            font-weight: 700;
+        }
+
+        /* ===== EXPERIENCE SECTION ===== */
         .experience {
-            background: var(--secondary);
+            background: var(--white);
         }
 
         .timeline {
             position: relative;
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
         }
 
@@ -221,472 +762,1051 @@
             left: 50%;
             top: 0;
             bottom: 0;
-            width: 2px;
-            background: var(--primary);
+            width: 3px;
+            background: linear-gradient(180deg, var(--blue-primary), var(--blue-light), var(--gold));
             transform: translateX(-50%);
+            border-radius: 2px;
         }
 
         .timeline-item {
+            display: flex;
+            justify-content: flex-end;
+            padding-right: calc(50% + 40px);
             position: relative;
-            margin: 2rem 0;
-            opacity: 0;
-            transform: translateY(50px);
-            transition: all 0.6s ease;
-        }
-
-        .timeline-item.animate {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .timeline-item:nth-child(odd) {
-            transform: translateX(-50%) translateY(50px);
+            margin-bottom: 50px;
         }
 
         .timeline-item:nth-child(even) {
-            transform: translateX(50%) translateY(50px);
+            justify-content: flex-start;
+            padding-right: 0;
+            padding-left: calc(50% + 40px);
         }
 
-        .timeline-content {
-            background: var(--white);
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: var(--shadow);
-            position: relative;
-            width: 45%;
-        }
-
-        .timeline-item:nth-child(odd) .timeline-content {
-            margin-left: auto;
-        }
-
-        .timeline-item:nth-child(even) .timeline-content {
-            margin-right: auto;
-        }
-
-        .timeline-icon {
+        .timeline-dot {
             position: absolute;
-            top: 2rem;
             left: 50%;
-            transform: translateX(-50%);
-            width: 50px;
-            height: 50px;
-            background: var(--accent);
+            top: 20px;
+            width: 20px;
+            height: 20px;
             border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--white);
-            font-size: 1.2rem;
-            box-shadow: 0 5px 15px rgba(126, 211, 33, 0.4);
+            background: var(--white);
+            border: 4px solid var(--blue-primary);
+            transform: translateX(-50%);
+            z-index: 2;
+            transition: var(--transition);
         }
 
-        /* Skills */
+        .timeline-item:nth-child(even) .timeline-dot {
+            border-color: var(--gold);
+        }
+
+        .timeline-item:hover .timeline-dot {
+            transform: translateX(-50%) scale(1.3);
+            box-shadow: 0 0 0 6px rgba(27, 94, 140, 0.15);
+        }
+
+        .timeline-card {
+            background: var(--cream);
+            border-radius: var(--radius-md);
+            padding: 28px;
+            max-width: 420px;
+            transition: var(--transition);
+            border: 1px solid rgba(27, 94, 140, 0.06);
+            position: relative;
+        }
+
+        .timeline-card:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-4px);
+            background: var(--white);
+        }
+
+        .timeline-date {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--blue-primary);
+            background: var(--blue-soft);
+            padding: 4px 14px;
+            border-radius: 50px;
+            margin-bottom: 12px;
+        }
+
+        .timeline-card h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 4px;
+        }
+
+        .timeline-card .company {
+            font-size: 0.9rem;
+            color: var(--blue-primary);
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .timeline-card p {
+            font-size: 0.88rem;
+            color: var(--text-medium);
+            line-height: 1.7;
+        }
+
+        .timeline-card .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 14px;
+        }
+
+        .timeline-card .tag {
+            font-size: 0.75rem;
+            font-weight: 500;
+            padding: 4px 12px;
+            border-radius: 50px;
+            background: var(--white);
+            color: var(--text-medium);
+            border: 1px solid rgba(27, 94, 140, 0.1);
+        }
+
+        /* ===== SKILLS SECTION ===== */
+        .skills {
+            background: linear-gradient(180deg, var(--cream) 0%, var(--cream-dark) 100%);
+        }
+
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
         }
 
         .skill-card {
             background: var(--white);
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: var(--shadow);
+            border-radius: var(--radius-md);
+            padding: 30px;
             text-align: center;
-            transition: all 0.3s ease;
-            opacity: 0;
-            transform: translateY(30px);
+            transition: var(--transition);
+            border: 1px solid rgba(27, 94, 140, 0.06);
+            position: relative;
+            overflow: hidden;
         }
 
-        .skill-card.animate {
+        .skill-card::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--blue-primary), var(--blue-light));
+            transform: scaleX(0);
+            transition: var(--transition);
+        }
+
+        .skill-card:hover::after {
+            transform: scaleX(1);
+        }
+
+        .skill-card:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-6px);
+        }
+
+        .skill-icon {
+            width: 64px;
+            height: 64px;
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6rem;
+            margin: 0 auto 18px;
+            transition: var(--transition);
+        }
+
+        .skill-card:nth-child(1) .skill-icon { background: linear-gradient(135deg, #E3F2FD, #BBDEFB); }
+        .skill-card:nth-child(2) .skill-icon { background: linear-gradient(135deg, #E8F5E9, #C8E6C9); }
+        .skill-card:nth-child(3) .skill-icon { background: linear-gradient(135deg, #FFF3E0, #FFE0B2); }
+        .skill-card:nth-child(4) .skill-icon { background: linear-gradient(135deg, #F3E5F5, #E1BEE7); }
+        .skill-card:nth-child(5) .skill-icon { background: linear-gradient(135deg, #E0F7FA, #B2EBF2); }
+        .skill-card:nth-child(6) .skill-icon { background: linear-gradient(135deg, #FFF8E1, #FFECB3); }
+
+        .skill-card h3 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 8px;
+        }
+
+        .skill-card p {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        .skill-bar-container {
+            margin-top: 14px;
+        }
+
+        .skill-bar-label {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.78rem;
+            font-weight: 600;
+            color: var(--text-medium);
+            margin-bottom: 6px;
+        }
+
+        .skill-bar {
+            width: 100%;
+            height: 6px;
+            background: var(--cream);
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        .skill-bar-fill {
+            height: 100%;
+            border-radius: 3px;
+            background: linear-gradient(90deg, var(--blue-primary), var(--blue-light));
+            width: 0;
+            transition: width 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        /* ===== ACHIEVEMENTS SECTION ===== */
+        .achievements {
+            background: var(--white);
+        }
+
+        .achievement-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+
+        .achievement-card {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            padding: 28px;
+            background: var(--cream);
+            border-radius: var(--radius-md);
+            transition: var(--transition);
+            border: 1px solid rgba(27, 94, 140, 0.06);
+        }
+
+        .achievement-card:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-4px);
+            background: var(--white);
+        }
+
+        .achievement-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .achievement-card:nth-child(1) .achievement-icon {
+            background: linear-gradient(135deg, #FFF8E1, #FFD54F);
+        }
+        .achievement-card:nth-child(2) .achievement-icon {
+            background: linear-gradient(135deg, #E3F2FD, #64B5F6);
+        }
+        .achievement-card:nth-child(3) .achievement-icon {
+            background: linear-gradient(135deg, #E8F5E9, #81C784);
+        }
+        .achievement-card:nth-child(4) .achievement-icon {
+            background: linear-gradient(135deg, #FCE4EC, #F48FB1);
+        }
+
+        .achievement-card h3 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 4px;
+        }
+
+        .achievement-card p {
+            font-size: 0.88rem;
+            color: var(--text-medium);
+            line-height: 1.6;
+        }
+
+        /* ===== CONTACT SECTION ===== */
+        .contact {
+            background: linear-gradient(135deg, var(--blue-dark) 0%, var(--blue-primary) 50%, var(--blue-light) 100%);
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 70%);
+        }
+
+        .contact .section-tag {
+            color: var(--gold-light);
+        }
+
+        .contact .section-tag::before {
+            background: linear-gradient(90deg, transparent, var(--gold-light));
+        }
+
+        .contact .section-tag::after {
+            background: linear-gradient(90deg, var(--gold-light), transparent);
+        }
+
+        .contact .section-title {
+            color: var(--white);
+        }
+
+        .contact .section-desc {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: var(--radius-md);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: var(--transition);
+        }
+
+        .contact-item:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateX(6px);
+        }
+
+        .contact-item-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 14px;
+            background: rgba(255, 255, 255, 0.12);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            flex-shrink: 0;
+        }
+
+        .contact-item-text h4 {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: rgba(255, 255, 255, 0.6);
+            margin-bottom: 2px;
+        }
+
+        .contact-item-text p {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--white);
+        }
+
+        .contact-item-text a {
+            color: var(--white);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .contact-item-text a:hover {
+            color: var(--gold-light);
+        }
+
+        .contact-cta {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            gap: 20px;
+        }
+
+        .contact-cta h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--white);
+        }
+
+        .contact-cta p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        .btn-contact {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 36px;
+            background: var(--white);
+            color: var(--blue-primary);
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: var(--transition);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-contact:hover {
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: 0 14px 40px rgba(0, 0, 0, 0.3);
+            background: var(--gold-light);
+            color: var(--blue-dark);
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background: var(--blue-dark);
+            color: rgba(255, 255, 255, 0.5);
+            text-align: center;
+            padding: 30px 24px;
+            font-size: 0.85rem;
+        }
+
+        .footer a {
+            color: var(--gold-light);
+            text-decoration: none;
+        }
+
+        .footer .heart {
+            color: #E74C3C;
+            display: inline-block;
+            animation: heartbeat 1.5s ease-in-out infinite;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+
+        /* ===== SCROLL ANIMATIONS ===== */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .reveal.visible {
             opacity: 1;
             transform: translateY(0);
         }
 
-        .skill-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(74, 144, 226, 0.3);
-        }
+        .reveal-delay-1 { transition-delay: 0.1s; }
+        .reveal-delay-2 { transition-delay: 0.2s; }
+        .reveal-delay-3 { transition-delay: 0.3s; }
+        .reveal-delay-4 { transition-delay: 0.4s; }
+        .reveal-delay-5 { transition-delay: 0.5s; }
+        .reveal-delay-6 { transition-delay: 0.6s; }
 
-        .skill-icon {
-            font-size: 3rem;
-            color: var(--accent);
-            margin-bottom: 1rem;
-        }
-
-        /* Certifications */
-        .certs-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .cert-card {
-            background: linear-gradient(135deg, var(--primary), #5AB8FF);
+        /* ===== BACK TO TOP ===== */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--blue-primary), var(--blue-light));
             color: var(--white);
-            padding: 2rem;
-            border-radius: 15px;
-            text-align: center;
-            box-shadow: var(--shadow);
-            transition: transform 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            box-shadow: var(--shadow-md);
+            z-index: 999;
+            border: none;
         }
 
-        .cert-card:hover {
-            transform: scale(1.05);
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
         }
 
-        /* Contact */
-        .contact {
-            background: var(--white);
-            text-align: center;
+        .back-to-top:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
         }
 
-        .contact form {
-            max-width: 600px;
-            margin: 0 auto;
-            display: grid;
-            gap: 1rem;
-        }
-
-        .contact input, .contact textarea {
-            padding: 1rem;
-            border: 2px solid var(--border);
-            border-radius: 10px;
-            font-family: inherit;
-            transition: border-color 0.3s ease;
-        }
-
-        .contact input:focus, .contact textarea:focus {
-            outline: none;
-            border-color: var(--primary);
-        }
-
-        /* Footer */
-        footer {
-            background: var(--text-dark);
-            color: var(--white);
-            text-align: center;
-            padding: 2rem;
-        }
-
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .menu-toggle {
-                display: block;
-            }
-
-            .nav-menu {
-                position: fixed;
-                top: 70px;
-                left: -100%;
-                width: 100%;
-                height: calc(100vh - 70px);
-                background: var(--white);
-                flex-direction: column;
-                justify-content: flex-start;
-                align-items: center;
-                padding-top: 2rem;
-                transition: left 0.3s ease;
-            }
-
-            .nav-menu.active {
-                left: 0;
-            }
-
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .avatar.jpg {
-                width: 140px;
-                height: 140px;
-            }
-
-            .about-content {
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .hero-container {
                 grid-template-columns: 1fr;
                 text-align: center;
+                gap: 40px;
+            }
+
+            .hero-content {
+                order: 2;
+            }
+
+            .hero-image {
+                order: 1;
+            }
+
+            .hero-desc {
+                margin: 0 auto 32px;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .hero-stats {
+                justify-content: center;
+            }
+
+            .avatar-wrapper {
+                width: 300px;
+                height: 300px;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
             }
 
             .timeline::before {
                 left: 20px;
             }
 
-            .timeline-content {
-                width: calc(100% - 60px);
-                margin-left: 60px !important;
+            .timeline-item,
+            .timeline-item:nth-child(even) {
+                padding-left: 60px;
+                padding-right: 0;
+                justify-content: flex-start;
             }
 
-            .timeline-item:nth-child(even) .timeline-content {
-                margin-left: 60px !important;
-            }
-
-            .timeline-icon {
+            .timeline-dot {
                 left: 20px;
             }
+
+            .timeline-card {
+                max-width: 100%;
+            }
+
+            .skills-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
-        /* Scroll Animations */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.6s ease;
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 280px;
+                height: 100vh;
+                background: var(--white);
+                flex-direction: column;
+                padding: 80px 30px 30px;
+                gap: 4px;
+                box-shadow: -10px 0 40px rgba(0, 0, 0, 0.1);
+                transition: var(--transition);
+            }
+
+            .nav-links.open {
+                right: 0;
+            }
+
+            .nav-links a {
+                padding: 14px 20px;
+                font-size: 1rem;
+                border-radius: var(--radius-sm);
+            }
+
+            .nav-toggle {
+                display: flex;
+            }
+
+            .hero-title {
+                font-size: 2.4rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.05rem;
+            }
+
+            .section {
+                padding: 70px 20px;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .edu-cards {
+                grid-template-columns: 1fr;
+            }
+
+            .achievement-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-stats {
+                gap: 20px;
+            }
+
+            .stat-number {
+                font-size: 1.6rem;
+            }
+
+            .avatar-wrapper {
+                width: 250px;
+                height: 250px;
+            }
+
+            .avatar-decoration {
+                display: none;
+            }
+
+            .deco-2 {
+                display: none;
+            }
         }
 
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .hero-stats {
+                flex-wrap: wrap;
+                gap: 16px;
+            }
+        }
+
+        /* ===== PRINT STYLES ===== */
+        @media print {
+            .navbar, .back-to-top, .hero::before, .hero::after {
+                display: none !important;
+            }
+            .hero {
+                min-height: auto;
+                padding: 40px 0;
+            }
+            .section {
+                padding: 30px 0;
+            }
+            .reveal {
+                opacity: 1 !important;
+                transform: none !important;
+            }
         }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav>
+
+    <!-- ===== NAVIGATION ===== -->
+    <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <div class="logo">CMM</div>
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="#home">Trang chủ</a></li>
+            <a href="#hero" class="nav-logo">M.Mẫn<span>.</span></a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#hero" class="active">Trang chủ</a></li>
                 <li><a href="#about">Giới thiệu</a></li>
-                <li><a href="#experience">Kinh nghiệm</a></li>
                 <li><a href="#education">Học vấn</a></li>
+                <li><a href="#experience">Kinh nghiệm</a></li>
                 <li><a href="#skills">Kỹ năng</a></li>
-                <li><a href="#certs">Chứng chỉ</a></li>
+                <li><a href="#achievements">Thành tích</a></li>
                 <li><a href="#contact">Liên hệ</a></li>
             </ul>
-            <div class="menu-toggle" id="menuToggle">
-                <i class="fas fa-bars"></i>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </div>
     </nav>
 
-    <!-- Hero -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <div class="avatar">
-                <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80" alt="Chau Minh Man - Chuyên gia Gia cầm">
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero" id="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="dot"></span>
+                    Sẵn sàng cho cơ hội mới
+                </div>
+                <h1 class="hero-title">
+                    Châu Minh<br><span class="highlight">Mẫn</span>
+                </h1>
+                <p class="hero-subtitle">Cử nhân Khoa học Động vật &amp; Thạc sĩ đang theo học</p>
+                <p class="hero-desc">
+                    Chuyên gia trẻ trong lĩnh vực chăn nuôi &amp; dinh dưỡng động vật, với kinh nghiệm thực tế tại các tập đoàn hàng đầu như New Hope, Mavin và Olmix Asialand. Kết hợp nền tảng học thuật vững chắc với kỹ năng kinh doanh và nghiên cứu chuyên sâu.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        Liên hệ ngay
+                    </a>
+                    <a href="#experience" class="btn btn-outline">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                        Xem kinh nghiệm
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">2+</div>
+                        <div class="stat-label">Năm kinh nghiệm</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">3</div>
+                        <div class="stat-label">Tập đoàn lớn</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">12K</div>
+                        <div class="stat-label">Nái quản lý</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">🥇</div>
+                        <div class="stat-label">HCV Thể thao</div>
+                    </div>
+                </div>
             </div>
-            <h1>Châu Minh Mẫn</h1>
-            <p class="hero-title">Chuyên viên Kinh doanh Kỹ thuật & Tư vấn Trang trại Gia cầm</p>
-            <a href="#contact" class="cta-btn">Liên hệ ngay</a>
-        </div>
-    </section>
-
-    <!-- About -->
-    <section id="about" class="about">
-        <h2 class="section-title">Giới thiệu bản thân</h2>
-        <div class="about-content">
-            <div class="profile-text fade-in">
-                <p>Tốt nghiệp Cử nhân Khoa học Chăn nuôi tại Đại học Cần Thơ năm 2024, hiện đang theo học Thạc sĩ Khoa học Chăn nuôi (Khóa 32). Với kinh nghiệm thực tiễn tại Olmix Asialand, tôi sở hữu chuyên môn sâu về kỹ thuật tiêm chủng gia cầm, khám nghiệm tử thi và chẩn đoán bệnh. Đã hỗ trợ hàng loạt trang trại tại khu vực Đông Nam Bộ và Bến Tre, thúc đẩy tăng trưởng doanh số và tối ưu hóa quy trình sản xuất bền vững.</p>
-                <p>Năng động, đam mê lĩnh vực chăn nuôi gia cầm, tôi cam kết mang đến giải pháp kỹ thuật tiên tiến kết hợp với kỹ năng kinh doanh, góp phần nâng cao hiệu quả kinh tế cho các doanh nghiệp nông nghiệp.</p>
-            </div>
-            <div style="text-align: center;">
-                <div class="avatar" style="width: 250px; height: 250px; margin: 0 auto;">
-                    <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="Chau Minh Man">
+            <div class="hero-image">
+                <div class="avatar-wrapper">
+                    <div class="avatar-ring"></div>
+                    <div class="avatar-ring-2"></div>
+                    <img src="avatar.jpg" alt="Châu Minh Mẫn" class="avatar-img" onerror="this.style.display='none'; this.parentElement.innerHTML += '<div style=\'width:100%;height:100%;border-radius:50%;background:linear-gradient(135deg,#1B5E8C,#2E86C1);display:flex;align-items:center;justify-content:center;font-size:5rem;color:white;font-family:Playfair Display,serif;font-weight:700;position:relative;z-index:2;border:5px solid white;box-shadow:0 24px 60px rgba(27,94,140,0.18)\'>MM</div>'">
+                    <div class="avatar-decoration deco-1">
+                        <div class="icon">🐷</div>
+                        <div>
+                            <div style="font-size:0.75rem;color:var(--text-light)">Chuyên môn</div>
+                            <div>Chăn nuôi Heo</div>
+                        </div>
+                    </div>
+                    <div class="avatar-decoration deco-2">
+                        <div class="icon">💉</div>
+                        <div>
+                            <div style="font-size:0.75rem;color:var(--text-light)">Kỹ năng</div>
+                            <div>Tiêm Vaccine</div>
+                        </div>
+                    </div>
+                    <div class="avatar-decoration deco-3">
+                        <div class="icon">🎓</div>
+                        <div>
+                            <div style="font-size:0.75rem;color:var(--text-light)">Đang học</div>
+                            <div>Thạc sĩ K32</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Experience -->
-    <section id="experience" class="experience">
-        <h2 class="section-title">Kinh nghiệm làm việc</h2>
-        <div class="timeline">
-            <div class="timeline-item">
-                <div class="timeline-icon">
-                    <i class="fas fa-briefcase"></i>
+    <!-- ===== ABOUT SECTION ===== -->
+    <section class="section about" id="about">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <div class="section-tag">Giới thiệu</div>
+                <h2 class="section-title">Về Bản Thân Tôi</h2>
+                <p class="section-desc">Hành trình từ sinh viên Nông nghiệp đến chuyên gia chăn nuôi & kinh doanh nông nghiệp</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-text reveal">
+                    <h3>Châu Minh Mẫn — Đam mê Nông nghiệp &amp; Chăn nuôi</h3>
+                    <p>
+                        Tôi là một cử nhân chuyên ngành Khoa học Động vật tốt nghiệp Đại học Cần Thơ năm 2024, hiện đang tiếp tục theo đuổi chương trình Thạc sĩ cùng chuyên ngành. Với nền tảng kiến thức vững chắc và kinh nghiệm thực tiễn tại các tập đoàn chăn nuôi hàng đầu Việt Nam, tôi mong muốn đóng góp vào sự phát triển bền vững của ngành nông nghiệp nước nhà.
+                    </p>
+                    <p>
+                        Ngoài chuyên môn, tôi còn là một người năng động với thành tích thể thao nổi bật và khả năng làm việc nhóm xuất sắc — những yếu tố giúp tôi tự tin thích nghi với mọi môi trường làm việc chuyên nghiệp.
+                    </p>
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <div class="info-icon">📍</div>
+                            <div>
+                                <div class="info-label">Quê quán</div>
+                                <div class="info-value">Cà Mau</div>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon">📅</div>
+                            <div>
+                                <div class="info-label">Ngày sinh</div>
+                                <div class="info-value">13/01/2001</div>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon">📞</div>
+                            <div>
+                                <div class="info-label">Điện thoại</div>
+                                <div class="info-value">0932 872 892</div>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon">✉️</div>
+                            <div>
+                                <div class="info-label">Email</div>
+                                <div class="info-value" style="font-size:0.78rem;">manm0225003@student.ctu.edu.vn</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="timeline-content fade-in">
-                    <h3>Nhân viên Kinh doanh Kỹ thuật</h3>
-                    <p><strong>Olmix Asialand, Đồng Nai – Khu vực Đông Nam Bộ</strong> <br> Tháng 7/2024 – Nay</p>
-                    <ul>
-                        <li>Cung cấp tư vấn kỹ thuật và hỗ trợ trang trại gia cầm, nâng cao phòng ngừa bệnh qua chương trình tiêm chủng tùy chỉnh.</li>
-                        <li>Phát triển thị trường khu vực, mở rộng cơ sở khách hàng và thúc đẩy tăng trưởng doanh số thông qua quản lý quan hệ khách hàng chủ động.</li>
-                        <li>Duy trì đối tác lâu dài, đảm bảo dịch vụ kỹ thuật liên tục để tối ưu hóa sức khỏe gia cầm và doanh thu lặp lại.</li>
+                <div class="about-highlights reveal reveal-delay-2">
+                    <div class="highlight-card">
+                        <h4>🎯 Mục tiêu nghề nghiệp</h4>
+                        <p>Phát triển chuyên sâu trong lĩnh vực Khoa học Động vật & Kinh doanh Nông nghiệp, hướng đến vị trí Quản lý Kỹ thuật hoặc Phát triển Thị trường, ứng dụng nghiên cứu vào thực tiễn chăn nuôi bền vững.</p>
+                    </div>
+                    <div class="highlight-card">
+                        <h4>💡 Triết lý làm việc</h4>
+                        <p>"Kết hợp giữa kiến thức học thuật và kinh nghiệm thực địa để tạo ra giá trị bền vững cho ngành chăn nuôi Việt Nam."</p>
+                    </div>
+                    <div class="highlight-card">
+                        <h4>🌟 Điểm mạnh nổi bật</h4>
+                        <p>Khả năng thích nghi nhanh, giao tiếp tốt, tư duy phân tích sắc bén và tinh thần học hỏi không ngừng — được rèn luyện qua môi trường đại học và thực tế doanh nghiệp.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== EDUCATION SECTION ===== -->
+    <section class="section education" id="education">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <div class="section-tag">Học vấn</div>
+                <h2 class="section-title">Nền Tảng Học Thuật</h2>
+                <p class="section-desc">Hành trình học tập tại ngôi trường Đại học hàng đầu khu vực Đồng bằng sông Cửu Long</p>
+            </div>
+            <div class="edu-cards">
+                <div class="edu-card reveal">
+                    <div class="edu-icon">🎓</div>
+                    <div class="edu-degree">Cử nhân</div>
+                    <h3 class="edu-title">Khoa học Động vật</h3>
+                    <p class="edu-school">Trường Đại học Cần Thơ</p>
+                    <p class="edu-year">Tốt nghiệp năm 2024</p>
+                    <ul class="edu-details">
+                        <li>Dinh dưỡng vật nuôi & Thức ăn chăn nuôi</li>
+                        <li>Quản lý dịch bệnh & An toàn sinh học</li>
+                        <li>Kỹ thuật chăn nuôi Heo & Gia cầm</li>
+                        <li>Di truyền & Chọn giống động vật</li>
+                        <li>Quản lý & Kinh doanh trang trại</li>
+                    </ul>
+                </div>
+                <div class="edu-card master reveal reveal-delay-2">
+                    <div class="edu-icon">📚</div>
+                    <div class="edu-degree">Thạc sĩ — Đang theo học</div>
+                    <h3 class="edu-title">Khoa học Động vật</h3>
+                    <p class="edu-school">Trường Đại học Cần Thơ — Khóa 32</p>
+                    <p class="edu-year">Hiện tại</p>
+                    <ul class="edu-details">
+                        <li>Nghiên cứu chuyên sâu về dinh dưỡng động vật</li>
+                        <li>Phương pháp nghiên cứu khoa học nâng cao</li>
+                        <li>Ứng dụng công nghệ sinh học trong chăn nuôi</li>
+                        <li>Phát triển bền vững ngành nông nghiệp</li>
                     </ul>
                 </div>
             </div>
-            <div class="timeline-item">
-                <div class="timeline-icon">
-                    <i class="fas fa-user-graduate"></i>
+        </div>
+    </section>
+
+    <!-- ===== EXPERIENCE SECTION ===== -->
+    <section class="section experience" id="experience">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <div class="section-tag">Kinh nghiệm</div>
+                <h2 class="section-title">Hành Trình Sự Nghiệp</h2>
+                <p class="section-desc">Từ thực tập sinh đến đại diện kinh doanh — mỗi bước đi đều là bài học quý giá</p>
+            </div>
+            <div class="timeline">
+                <!-- Item 1 -->
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-date">📅 2024 — Hiện tại</div>
+                        <h3>Đại diện Kinh doanh Khu vực Miền Đông</h3>
+                        <p class="company">Công ty Olmix Asialand</p>
+                        <p>
+                            Tư vấn, giới thiệu và phân phối sản phẩm dinh dưỡng & thú y cho hệ thống đại lý và trang trại khu vực miền Đông Nam Bộ. Xây dựng và duy trì mạng lưới khách hàng, hỗ trợ kỹ thuật chăn nuôi, theo dõi hiệu quả sản phẩm sau bán hàng. Thu thập phản hồi thị trường và đề xuất chiến lược mở rộng.
+                        </p>
+                        <div class="tags">
+                            <span class="tag">Kinh doanh B2B</span>
+                            <span class="tag">Tư vấn kỹ thuật</span>
+                            <span class="tag">Phát triển thị trường</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="timeline-content fade-in">
-                    <h3>Thực tập sinh / Cộng tác viên</h3>
-                    <p><strong>Olmix Asialand, Bến Tre</strong> <br> 2022 – 2024 (Thời gian sinh viên)</p>
-                    <ul>
-                        <li>Thực hiện tiêm chủng gia cầm thực tế, khám nghiệm tử thi và chẩn đoán bệnh, xác định tác nhân gây bệnh và đề xuất can thiệp kịp thời.</li>
-                        <li>Hỗ trợ dịch vụ kỹ thuật tại nhiều trang trại, quản lý cơ bản và chiến lược phòng ngừa để giảm thiểu dịch bệnh và tăng năng suất.</li>
-                        <li>Đóng góp vào hoạt động kinh doanh bằng cách trình diễn hiệu quả sản phẩm tại trang trại, xây dựng nền tảng quan hệ khách hàng.</li>
-                    </ul>
+                <!-- Item 2 -->
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-date">📅 Năm 3 & 4 Đại học</div>
+                        <h3>Cộng tác viên Kỹ thuật</h3>
+                        <p class="company">Công ty Olmix Asialand — Bến Tre</p>
+                        <p>
+                            Hỗ trợ triển khai chương trình tiêm vaccine cho gà tại các trang trại đối tác. Ghi nhận dữ liệu, đánh giá hiệu quả miễn dịch và hỗ trợ kỹ thuật viên chính trong công tác phòng bệnh. Rèn luyện kỹ năng thực địa và giao tiếp với nông dân.
+                        </p>
+                        <div class="tags">
+                            <span class="tag">Tiêm vaccine</span>
+                            <span class="tag">Chăn nuôi gia cầm</span>
+                            <span class="tag">Phòng bệnh</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 3 -->
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-date">📅 Thực tập Đại học</div>
+                        <h3>Thực tập sinh Chăn nuôi Heo</h3>
+                        <p class="company">Trại heo 12.000 nái — New Hope & Mavin</p>
+                        <p>
+                            Tham gia trực tiếp quy trình chăn nuôi công nghiệp quy mô lớn: quản lý dinh dưỡng, chăm sóc đàn nái và heo con, thực hiện an toàn sinh học. Học hỏi vận hành trang trại hiện đại, xử lý tình huống dịch bệnh và ghi nhật ký kỹ thuật hàng ngày.
+                        </p>
+                        <div class="tags">
+                            <span class="tag">Chăn nuôi heo</span>
+                            <span class="tag">An toàn sinh học</span>
+                            <span class="tag">Quy mô công nghiệp</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Education -->
-    <section id="education" class="about">
-        <h2 class="section-title">Học vấn</h2>
-        <div class="skills-grid">
-            <div class="skill-card fade-in">
-                <div class="skill-icon"><i class="fas fa-graduation-cap"></i></div>
-                <h3>Thạc sĩ Khoa học Chăn nuôi (Khóa 32)</h3>
-                <p>Đại học Cần Thơ, Việt Nam<br><em>Đang theo học (Dự kiến hoàn thành 2026)</em></p>
+    <!-- ===== SKILLS SECTION ===== -->
+    <section class="section skills" id="skills">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <div class="section-tag">Kỹ năng</div>
+                <h2 class="section-title">Năng Lực Chuyên Môn</h2>
+                <p class="section-desc">Tổng hợp kỹ năng được tích lũy qua học tập và thực tiễn công việc</p>
             </div>
-            <div class="skill-card fade-in">
-                <div class="skill-icon"><i class="fas fa-award"></i></div>
-                <h3>Cử nhân Khoa học Chăn nuôi</h3>
-                <p>Đại học Cần Thơ, Việt Nam<br><em>Tốt nghiệp 2024</em></p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills -->
-    <section id="skills" class="experience">
-        <h2 class="section-title">Kỹ năng chuyên môn</h2>
-        <div class="skills-grid">
-            <div class="skill-card fade-in">
-                <div class="skill-icon"><i class="fas fa-syringe"></i></div>
-                <h3>Kỹ thuật tiêm chủng gia cầm</h3>
-                <p>Thành thạo các quy trình tiêm chủng và giao thức bảo vệ sức khỏe gia cầm.</p>
-            </div>
-            <div class="skill-card fade-in">
-                <div class="skill-icon"><i class="fas fa-microscope"></i></div>
-                <h3>Khám nghiệm & Chẩn đoán bệnh</h3>
-                <p>Chuyên sâu về necropsy và chẩn đoán bệnh gia cầm chính xác.</p>
-            </div>
-            <div class="skill-card fade-in">
-                <div class="skill-icon"><i class="fas fa-tractor"></i></div>
-                <h3>Quản lý trang trại & Sinh an toàn</h3>
-                <p>Quản lý cơ bản trang trại và biện pháp sinh an toàn hiệu quả.</p>
-            </div>
-            <div class="skill-card fade-in">
-                <div class="skill-icon"><i class="fas fa-chart-line"></i></div>
-                <h3>Tư vấn kỹ thuật & Kinh doanh</h3>
-                <p>Tư vấn khách hàng, phát triển thị trường và hỗ trợ bán hàng.</p>
-            </div>
-            <div class="skill-card fade-in">
-                <div class="skill-icon"><i class="fas fa-shield-alt"></i></div>
-                <h3>Phòng ngừa & Kiểm soát bệnh</h3>
-                <p>Chiến lược kiểm soát dịch bệnh và phòng ngừa tiên tiến.</p>
-            </div>
-            <div class="skill-card fade-in">
-                <div class="skill-icon"><i class="fas fa-cogs"></i></div>
-                <h3>Tối ưu hóa sản xuất gia cầm</h3>
-                <p>Tăng cường năng suất và hiệu quả sản xuất bền vững.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Certifications -->
-    <section id="certs" class="about">
-        <h2 class="section-title">Chứng chỉ</h2>
-        <div class="certs-grid">
-            <div class="cert-card fade-in">
-                <i class="fas fa-certificate" style="font-size: 3rem; margin-bottom: 1rem;"></i>
-                <h3>Chứng chỉ Tin học</h3>
-                <p>[Cơ quan cấp], 2023</p>
-            </div>
-            <div class="cert-card fade-in">
-                <i class="fas fa-globe" style="font-size: 3rem; margin-bottom: 1rem;"></i>
-                <h3>Tiếng Anh trình độ B1</h3>
-                <p>[Cơ quan cấp], 2023</p>
+            <div class="skills-grid">
+                <div class="skill-card reveal">
+                    <div class="skill-icon">🐷</div>
+                    <h3>Chăn nuôi Heo</h3>
+                    <p>Quản lý đàn nái, heo con, heo thịt tại trang trại quy mô công nghiệp 12.000 nái</p>
+                    <div class="skill-bar-container">
+                        <div class="skill-bar-label"><span>Mức độ thành thạo</span><span>90%</span></div>
+                        <div class="skill-bar"><div class="skill-bar-fill" data-width="90"></div></div>
+                    </div>
+                </div>
+                <div class="skill-card reveal reveal-delay-1">
+                    <div class="skill-icon">🐔</div>
+                    <h3>Chăn nuôi Gia cầm</h3>
+                    <p>Tiêm vaccine, phòng bệnh, quản lý chuồng trại và đánh giá hiệu quả miễn dịch</p>
+                    <div class="skill-bar-container">
+                        <div class="skill-bar-label"><span>Mức độ thành thạo</span><span>85%</span></div>
+                        <div class="skill-bar"><div class="skill-bar-fill" data-width="85"></div></div>
+                    </div>
+                </div>
+                <div class="skill-card reveal reveal-delay-2">
+                    <div class="skill-icon">📊</div>
+                    <h3>Kinh doanh & Tư vấn</h3>
+                    <p>Phát triển thị trường, chăm sóc khách hàng, tư vấn kỹ thuật dinh dưỡng & thú y</p>
+                    <div class="skill-bar-container">
+                        <div class="skill-bar-label"><span>Mức độ thành thạo</span><span>80%</span></div>
+                        <div class="skill-bar"><div class="skill-bar-fill" data-width="80"></div></div>
+                    </div>
+                </div>
+                <div class="skill-card reveal reveal-delay-3">
+                    <div class="skill-icon">🔬</div>
+                    <h3>Nghiên cứu Khoa học</h3>
+                    <p>Phương pháp nghiên cứu, phân tích dữ liệu, viết báo cáo và đề tài khoa học</p>
+                    <div class="skill-bar-container">
+                        <div class="skill-bar-label"><span>Mức độ thành thạo</span><span>75%</span></div>
+                        <div class="skill-bar"><div class="skill-bar-fill" data-width="75"></div></div>
+                    </div>
+                </div>
+                <div class="skill-card reveal reveal-delay-4">
+                    <div class="skill-icon">💻</div>
+                    <h3>Tin học Văn phòng</h3>
+                    <p>Thành thạo Microsoft Office (Word, Excel, PowerPoint), phần mềm quản lý trang trại</p>
+                    <div class="skill-bar-container">
+                        <div class="skill-bar-label"><span>Mức độ thành thạo</span><span>85%</span></div>
+                        <div class="skill-bar"><div class="skill-bar-fill" data-width="85"></div></div>
+                    </div>
+                </div>
+                <div class="skill-card reveal reveal-delay-5">
+                    <div class="skill-icon">🌐</div>
+                    <h3>Tiếng Anh B1</h3>
+                    <p>Giao tiếp cơ bản, đọc hiểu tài liệu chuyên ngành và hướng dẫn kỹ thuật quốc tế</p>
+                    <div class="skill-bar-container">
+                        <div class="skill-bar-label"><span>Mức độ thành thạo</span><span>70%</span></div>
+                        <div class="skill-bar"><div class="skill-bar-fill" data-width="70"></div></div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact -->
-    <section id="contact" class="contact">
-        <h2 class="section-title">Liên hệ</h2>
-        <p style="font-size: 1.2rem; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
-            Sẵn sàng thảo luận cơ hội hợp tác trong lĩnh vực chăn nuôi gia cầm và nông nghiệp bền vững.
-        </p>
-        <div style="display: flex; gap: 1rem; justify-content: center; margin-bottom: 2rem; font-size: 1.1rem;">
-            <a href="mailto:ManM0225003@Student.ctu.edu.vn" style="color: var(--primary);"><i class="fas fa-envelope"></i> ManM0225003@Student.ctu.edu.vn</a>
-            <a href="tel:+84932872890" style="color: var(--primary);"><i class="fas fa-phone"></i> +84 932 872 890</a>
-        </div>
-        <form id="contactForm" style="max-width: 500px; margin: 0 auto;">
-            <input type="text" placeholder="Họ và tên" required>
-            <input type="email" placeholder="Email" required>
-            <textarea rows="5" placeholder="Tin nhắn của bạn" required></textarea>
-            <button type="submit" class="cta-btn" style="width: 100%;">Gửi tin nhắn</button>
-        </form>
-        <p style="margin-top: 2rem; opacity: 0.8;">Hoặc <a href="mailto:ManM0225003@Student.ctu.edu.vn" style="color: var(--primary);">liên hệ trực tiếp qua email</a></p>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 Châu Minh Mẫn. Tất cả quyền được bảo lưu. | Phát triển bởi chuyên gia front-end.</p>
-    </footer>
-
-    <script>
-        // Mobile Menu Toggle
-        const menuToggle = document.getElementById('menuToggle');
-        const navMenu = document.getElementById('navMenu');
-
-        menuToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-        });
-
-        // Smooth Scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-                navMenu.classList.remove('active');
-            });
-        });
-
-        // Fade-in on Scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('animate', 'visible');
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.fade-in, .timeline-item, .skill-card').forEach(el => {
-            observer.observe(el);
-        });
-
-        // Contact Form
-        document.getElementById('contactForm').addEventListener('submit', (e) => {
-            e.preventDefault();
-            alert('Cảm ơn bạn! Tin nhắn đã được gửi. Tôi sẽ liên hệ sớm.');
-            e.target.reset();
-        });
-
-        // Nav Shadow on Scroll
-        window.addEventListener('scroll', () => {
-            const nav = document.querySelector('nav');
-            if (window.scrollY > 50) {
-                nav.style.background = 'rgba(255, 255, 255, 0.98)';
-                nav.style.boxShadow = '0 5px 30px rgba(0,0,0,0.15)';
-            } else {
-                nav.style.background = 'rgba(255, 255, 255, 0.95)';
-                nav.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
-            }
-        });
-    </script>
-</body>
-</html>
-```
+    <!-- ===== ACHIEVEMENTS SECTION ===== -->
+    <section class="section achievements" id="achievements">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <div class="section-tag">Thành tích</div>
+                <h2 class="section-title">Giải Thưởng & Hoạt Động</h2>
+                <p class="section-desc">Những dấu ấn nổi bật trong học tập, thể thao và hoạt động ngoại khóa</p>
+            </div>
+            <div class="achievement-grid">
+                <div class="achievement-card reveal">
+                    <div class="achievement-icon">🥇</div>
+                    <div>
+                        <h3>Huy chương Vàng Nhảy Cao</h3>
+                        <p>Đại hội Thể dục Thể thao tỉnh Cà Mau — Thành tích thể thao xuất sắc, thể hiện tinh thần kỷ luật và nỗ lực vượt bậc.</p>
+                    </div>
+                </div>
+                <div class="achievement-card reveal reveal-delay-1">
+                    <div class="achievement-icon">🏐</div>
+                    <div>
+                       
